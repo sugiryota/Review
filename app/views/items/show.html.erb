@@ -29,7 +29,7 @@
               <% if @item.user.image.attached? %>
                 <%= image_tag @item.user.image, class: "user-icon" %>
               <% else %>
-                <%= image_tag "soundreview2.png", alt: "user-icon", size: "200", class: "user-icon" %>
+                <%= image_tag "soundreview2.png", alt: "user-icon", class: "user-icon" %>
               <% end %>
             </div>
             
@@ -43,15 +43,16 @@
           </audio>
           
         </div>
-
+        <%if @item.text.present?%>
         <table class="detail-table">
           <tbody>
             <tr>
-              <th class="detail-item">Review</th>
+              <th class="detail-item">テキストレビュー</th>
               <td class="detail-value detail-text"><%= @item.text %></td>
             </tr>
           </tbody>
         </table>
+        <%end%>
       
         
         <%if user_signed_in?%>
@@ -73,14 +74,62 @@
       
       
       <div class="comment-box">
-        <form>
-          <textarea class="comment-text"></textarea>
-          <button type="submit" class="comment-btn">
-            <%= image_tag "send.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
-            <span>コメントする<span>
-          </button>
-        </form>
+        
+        
+        <% if user_signed_in? %>
+        <h2 class="items-sell-title">コメントを入力</h2>
+          <%= form_with model:[@item,@message], local: true do |f| %>
+          <div class="comment-explain">
+            <div class="weight-bold-comment">
+              ・文字コメント
+            </div>
+            <%= f.text_area :comment, class:"items-comment", id:"comment-info"%>
+            <div class="weight-comment">
+              ・音声コメント
+            </div>
+            <%= f.file_field :audiocomment , class:"sound-comment" %>
+          </div>
+          <div class="sell-btn-contents">
+            <%= f.submit "投稿する" ,class:"comment-btn" %>
+          </div>
+          <%end%>
+        <% else %>
+          <strong><p>※ コメントの投稿には新規登録/ログインが必要です </p></strong>
+        <% end %>
+        <div class="comments">
+          <h4>＜コメント一覧＞</h4>
+          <div class="comment">
+          <% @messages.each do |message| %>
+            <p>
+             <% if message.comment.present?%> 
+              <strong><%= message.user.nickname %></strong><br/>
+              <%= message.comment %><br/>
+             
+             <%end%>
+              
+
+            </p>
+          <% end %>
+          </div>
+        </div>  
+        <div class="comments2">
+          <h4>＜音声コメント一覧＞</h4>
+          <div class="comment2">
+          <% @messages.each do |message| %>
+            <p>
+              
+             <% if message.audiocomment.present?%>
+
+              <strong><%= message.user.nickname %></strong>
+              <audio src= "<%= "#{message.audiocomment}" %>" controls="">
+             <%end%> 
+              
+
+            </p>
+          <% end %>
+        </div>
       </div>
+
       
       
       <a href="#" class="another-item"><%= @item.category.name %>をもっと見る</a>
@@ -88,6 +137,3 @@
       </div>
       
       <%= render "shared/footer" %>
-      
-    
-   

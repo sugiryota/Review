@@ -38,9 +38,10 @@
 
 | Column      | Type       | Options     |
 | ----------- | ---------- | ----------- |
-| text        | text       | null: false |
+| comment     | text       | null: false |
 | user        | references |             |
 | item        | references |             |
+| audiocomment| string     |             |
 
 ### Association
 

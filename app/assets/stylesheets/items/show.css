@@ -71,7 +71,7 @@
 .item-red-btn {
   text-align: center;
   background-color: orange;
-  font-size: 2.4vw;
+  font-size: 2vw;
   font-weight: bold;
   color: #FFF;
   margin: 20px 0px;
@@ -83,7 +83,7 @@
 .item-destroy {
   background-color: lightgray;
   text-align: center;
-  font-size: 2.4vw;
+  font-size: 2vw;
   font-weight: bold;
   color: white;
   margin: 20px 0px;
@@ -116,7 +116,7 @@ th{
   line-height: 10vh;
   background-color: rgb(105, 168, 228);
   border: 1px solid #dedede;
-  font-size: 2.6vw;
+  font-size: 2.1vw;
   text-align: center;
   
 }
@@ -202,5 +202,40 @@ th{
   font-weight: bold;
   font-size: 23px;
 }
+.comment-box{
+  width:45vw;
+}
+.comment{
+  
+  height:40vh;
+  overflow: scroll;
+  border:3px solid black;
+}
+.comment2{
+  
+  border:3px solid black;
+  height:40vh;
+  overflow: scroll;
+}
+audio{
+  display:block;
+  width:100%;
+}
+.item-price-box{
+  width:50vw;
+}
+.items-comment{
+  width:40vw;
+  height:10vh;
+}
+.sound-comment{
+  margin:10px 0;
+}
+.comment-btn{
+  font-size:1.7vw;
+  width:20vw;
+  height:10vh;
+}
+
 
 
