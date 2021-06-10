@@ -1,0 +1,89 @@
+
+    <%= render "shared/header" %>
+    <div class="item-show">
+      <div class="item-box">
+        <h2 class="name">
+          <%= @item.name %>
+        </h2>
+        <div class="item-content">
+          <div class="item-img-content">
+            <%if @item.image.attached? %>
+              <%= image_tag @item.image, class: "item-box-img"  %>
+            <%else%>
+              <%= image_tag 'soundreview2.png', class: "item-box-img"  %>
+            <%end%>
+          </div>
+          <div class="item-profile">
+            <div class="item-user">
+              <div class="profile">
+                <% if @item.user.image.attached? %>
+                  <%= image_tag @item.user.image, class: "user-icon" %>
+                <% else %>
+                  <%= image_tag "soundreview.png", alt: "user-icon", size: "200", class: "user-icon" %>
+                <% end %>
+              </div>
+            
+              <div class="item-user-name">
+                <%= @item.user.nickname %>
+              </div>
+            </div> 
+            <div class="show-category"> 
+              <span>Category:</span>
+              <%= @item.category.name %>
+            </div>
+          </div>  
+        </div>  
+        <div class="item-price-box">
+          <audio src= "<%= "#{@item.audio}" %>" controls="",class="show-audio">
+                  
+          </audio>
+          
+        </div>
+
+        <table class="detail-table">
+          <tbody>
+            <tr>
+              <th class="detail-item">Review</th>
+              <td class="detail-value detail-text"><%= @item.text %></td>
+            </tr>
+          </tbody>
+        </table>
+      
+        
+        <%if user_signed_in?%>
+        <%if current_user.id==@item.user_id %>
+        <div class="edit-btn">
+          <div class="edit">
+            <%= link_to "レビューの編集", edit_item_path, method: :get, class: "item-red-btn" %>
+          </div>  
+          <div class="delete">
+            <%= link_to "削除", item_path, method: :delete, class:"item-destroy" %>
+          </div>
+        </div>  
+        <%end%>
+        <%end%>
+       
+        
+        
+      </div>
+      
+      
+      <div class="comment-box">
+        <form>
+          <textarea class="comment-text"></textarea>
+          <button type="submit" class="comment-btn">
+            <%= image_tag "send.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
+            <span>コメントする<span>
+          </button>
+        </form>
+      </div>
+      
+      
+      <a href="#" class="another-item"><%= @item.category.name %>をもっと見る</a>
+      
+      </div>
+      
+      <%= render "shared/footer" %>
+      
+    
+   

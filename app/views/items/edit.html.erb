@@ -1,0 +1,88 @@
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+    <%= link_to image_tag('soundreview.png' , size: '185x50'), "/" %>
+
+  </header>
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">レビューの情報を入力</h2>
+
+    <%= render 'shared/error_messages', model: @item %>
+
+    <%= form_with model:@item, local: true do |f| %>
+
+    <div class="items-detail">
+      <div class="weight-bold-text">
+      カテゴリー
+      <span class="indispensable">*必須</span>
+      </div>
+      <div class="form">
+        
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      </div>
+    </div>    
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        レビュー画像
+        
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        作品名<span class="counter">(40文字まで)</span>
+        <span class="indispensable">*必須</span>
+      </div>
+      <%= f.text_area :name, class:"items-text", id:"item-name" %>
+    </div>  
+    <div class="sound-upload">
+      <div class="weight-bold-text">
+        音声レビュー
+        <span class="indispensable">*必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :audio, id:"item-sound" %>
+      </div>
+    </div>
+    <div class="new-items">
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          文字レビュー
+        </div>
+        <%= f.text_area :text, class:"items-text", id:"item-info"%>
+      </div>
+    </div>
+    <div class="item-url">
+      <div class="weight-bold-text">
+        作品URL
+        
+      </div>
+      <%= f.text_area :url, class:"url", id:"item-name",class:"url" %>
+    </div>  
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    
+  </div>
+  <% end %>
+
+  <footer class="items-sell-footer">
+    <ul class="menu">
+      <li><a href="#">プライバシーポリシー</a></li>
+      <li><a href="#">newreview利用規約</a></li>
+      <li><a href="#">特定商取引に関する表記</a></li>
+    </ul>
+    <%= link_to image_tag('soundreview.png' , size: '185x50'), "/" %>
+    <p class="inc">
+      ©︎NewReview,Inc.
+    </p>
+  </footer>
+</div>

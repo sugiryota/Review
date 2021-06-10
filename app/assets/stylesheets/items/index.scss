@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+.main{
+  width:100vw;
+  position:relative;
+  
+}
+
+video{
+  
+  width: 100%;
+  
+}
+.categories{
+  
+	position: absolute;
+	left: 10vh;
+	top: 3vh;
+	z-index: 1;
+}
+.category{
+  font-family: serif;  
+	color: white;
+	font-size: 4vw;
+  cursor: pointer;
+}
+.categories h1{
+  font-family:serif;         
+	color: white;
+  font-size:5vw;
+
+}
+.item-name{
+  color:black;
+}
+.item-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.item-contents>.title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.item-contents>.subtitle {
+  font-size: 3vh;
+  margin: 1vh 0;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.item-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+
+
+
+.item-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+
+
+
+
+
+
+.item-btn {
+  width: 130px;
+  background: rgba(87, 89, 109,0.5);
+  text-align: center;
+  border-radius: 10%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 10px ;
+  text-decoration: none;
+}
+
+.item-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.item-btn-icon {
+  width: 60%;
+}
+
+
+
+
+
+
+
+
+
+.item-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item-lists>.list {
+  width:35%;
+  padding: 1vw;
+  background-color: #FFF;
+  
+}
+.link{
+  text-decoration: none;
+}
+
+
+.item-img-content {
+  position: relative;
+}
+
+.item-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+
+.item-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+  font-size: 3vh;
+  
+}
+
+
+audio{
+  width: 33vw;
+  padding:10px;
+  
+}
+
+.star-btn {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  height: 2vh;
+  width: 2vh;
+  margin-right: 0.5vw;
+}
+
+.star-count {
+  font-size: 2vh;
+}

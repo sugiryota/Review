@@ -1,0 +1,67 @@
+    <%=render "shared/header"%>
+    <div class='main'>
+        <div class="categories">
+          <h1>Category</h1>
+          <div class="category">
+            <div class="category-name">映画</div>
+          </div>  
+          <div class="category">
+            <div class="category-name">音楽</div>
+          </div>  
+          <div class="category">
+            <div class="category-name">アニメ</div>
+          </div>  
+          <div class="category">
+            <div class="category-name">書籍</div>
+          </div>  
+          <div class="category">
+            <div class="category-name">その他</div>
+          </div> 
+           
+        </div>
+    
+        <video autoplay muted playsinline src="assets/videos/sound1.mp4",playsinline autoplay loop ></video>
+  
+        <div class='item-contents'>
+          <h2 class='title'>Pick Up</h2>
+          <div class="subtitle" >
+            new reviews
+          </div>
+          <ul class='item-lists'>
+      
+            <%@items.each do |item|%>
+            <li class='list'>
+              <%= link_to item_path(item.id),class:"link" do %>
+              <div class='item-img-content'>
+                
+                <%if item.image.attached? %>
+                  <%= image_tag item.image, class: "item-img"  %>
+                <%else%>
+                  <%= image_tag 'soundreview2.png', class: "item-img"  %>
+                <%end%>  
+              </div>
+              <div class='item-info'>
+                
+                <%= item.name%>
+                
+              </div>
+              <audio src= "<%= "#{item.audio}" %>" controls="">
+                  
+              </audio>
+              
+              <% end %>
+            </li>
+            <%end%>
+          </ul>
+          
+          
+        </div> 
+          
+    </div>
+      
+    <%= link_to new_item_path, class: 'item-btn' do %>
+      <span class='item-btn-text'>Post Review</span>
+      <%= image_tag 'icon_camera.png' , size: '79x50' ,class: "item-btn-icon" %>
+    <% end %> 
+    <%= render "shared/footer" %>
+    
