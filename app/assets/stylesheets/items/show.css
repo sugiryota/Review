@@ -26,6 +26,14 @@
   margin-right:25vw;
   
 }
+
+.revier{
+  margin-top:14px;
+  font-size:2.7vw;
+}
+.profile{
+  margin-top:7px;
+}
 .item-user-name{
   font-size:2.8vw;
 }
@@ -76,6 +84,7 @@
   background-color: lightgray;
   text-align: center;
   font-size: 2.4vw;
+  font-weight: bold;
   color: white;
   margin: 20px 0px;
   padding: 2vh 6vw;
@@ -160,7 +169,8 @@ th{
   border: 1px solid rgb(105, 168, 228);
   color: #fff;
   width: 50%;
-  font-size: 13px;
+  font-size: 2.2vw;
+  font-weight: bold;
   border-radius: 100px;
   
 }
