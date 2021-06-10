@@ -63,7 +63,7 @@
 .item-red-btn {
   text-align: center;
   background-color: orange;
-  font-size: 12px;
+  font-size: 2.4vw;
   font-weight: bold;
   color: #FFF;
   margin: 20px 0px;
@@ -75,7 +75,7 @@
 .item-destroy {
   background-color: lightgray;
   text-align: center;
-  font-size: 12px;
+  font-size: 2.4vw;
   color: white;
   margin: 20px 0px;
   padding: 2vh 6vw;
@@ -107,7 +107,7 @@ th{
   line-height: 10vh;
   background-color: rgb(105, 168, 228);
   border: 1px solid #dedede;
-  font-size: 15px;
+  font-size: 2.6vw;
   text-align: center;
   
 }
