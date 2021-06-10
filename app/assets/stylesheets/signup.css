@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+.contents{
+    width:100vw;
+    height:auto;
+    position:relative; 
+    background-color: rgb(156, 206, 221);
+}
+
+.container{
+  
+  right:auto;
+  color:white;
+  text-align:center;
+  width:300px;
+  position:absolute;
+  z-index:1;
+}
+.container h2{
+  font-size:3vw;
+}
+.field{
+  font-size: 1.4vw;
+  margin-bottom:6px;
+}
+.new-form{
+  width:14vw;
+  height:4vh;
+}
+
+.log{
+  height:6vh;
+  width:15vw;
+  background-color:GREY;
+  color:white;
+  font-size:2vw;
+}
+.actions{
+  margin-top:1vh;
+}
+.right-message{
+  position: absolute;
+  top:30vh;
+  left:40vw;
+  color:red;
+  font-size: 14px;
+
+}
+.field{
+  margin:15px 0;
+}

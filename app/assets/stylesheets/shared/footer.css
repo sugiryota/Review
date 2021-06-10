@@ -1,0 +1,36 @@
+.footer{
+  width:100vw;
+  color:aliceblue;
+  background-color: rgb(156, 206, 221);
+  text-align:center;
+}
+.footer-contents{
+  display:flex;
+  justify-content: center;
+  margin-bottom:2vh;
+}
+.sound-details{
+  margin:0 4vw;
+
+}
+.footer-content-head{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.footer>p{
+  font-size: 1px;
+}
+.foot-icon{
+  width:20vw;
+  margin:0 auto;
+
+}
+li{
+  list-style: none;
+}
+.footer-link{
+  text-decoration: none;
+  color:white;
+  font-size:1.5vw;
+}
