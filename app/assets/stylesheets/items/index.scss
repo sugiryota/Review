@@ -56,18 +56,7 @@ video{
   font-weight: bold;
 }
 
-.item-lists {
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
-.item-lists>.list {
-  width: 37vh;
-  padding: 1vw;
-  background-color: #FFF;
-}
 
 
 
@@ -108,9 +97,13 @@ video{
 }
 
 
+.title,.subtitle,.item-info{
+  font-family:inherit;
+}
 
-
-
+.item-info{
+  font-weight: bold;
+}
 
 
 
@@ -123,7 +116,7 @@ video{
 }
 
 .item-lists>.list {
-  width:35%;
+  width:25%;
   padding: 1vw;
   background-color: #FFF;
   
@@ -153,7 +146,7 @@ video{
 
 
 audio{
-  width: 33vw;
+  width: 50vw;
   padding:10px;
   
 }
