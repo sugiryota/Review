@@ -1,0 +1,220 @@
+<%=render "shared/header"%>
+<% if @category=="2" %>
+<div class='main'>
+        <div class="category-movie">
+          <h1>Category</h1>
+          <div class="category">
+            <%= link_to "映画", "/items/category/2" ,class:"category-name"%>
+          </div>     
+        </div>
+        <div class='item-contents'>
+          <h2 class='title'>Pick Up</h2>
+          <div class="subtitle" >
+            movie reviews
+          </div>
+          <ul class='item-lists'>
+      
+            <%@movie.each do |movie|%>
+            <li class='list'>
+              <%= link_to item_path(movie.id),class:"link" do %>
+              <div class='item-img-content'>
+                
+                <%if movie.image.attached? %>
+                  <%= image_tag movie.image, class: "item-img"  %>
+                <%else%>
+                  <%= image_tag 'soundreview2.png', class: "item-img"  %>
+                <%end%>  
+              </div>
+              <div class='item-info'>
+                
+                <%= movie.name%>
+                
+              </div>
+              
+              
+              <% end %>
+            </li>
+            <%end%>
+          </ul>
+          
+          
+        </div> 
+          
+</div>
+ <% end %>
+<% if @category=="3" %>
+<div class='main'>
+        <div class="category-anime">
+          <h1>Category</h1>
+          <div class="category">
+            <%= link_to "アニメ", "/items/category/3" ,class:"category-name"%>
+          </div>     
+        </div>
+        <div class='item-contents'>
+          <h2 class='title'>Pick Up</h2>
+          <div class="subtitle" >
+            anime reviews
+          </div>
+          <ul class='item-lists'>
+      
+            <%@anime.each do |anime|%>
+            <li class='list'>
+              <%= link_to item_path(anime.id),class:"link" do %>
+              <div class='item-img-content'>
+                
+                <%if anime.image.attached? %>
+                  <%= image_tag anime.image, class: "item-img"  %>
+                <%else%>
+                  <%= image_tag 'soundreview2.png', class: "item-img"  %>
+                <%end%>  
+              </div>
+              <div class='item-info'>
+                
+                <%= anime.name%>
+                
+              </div>
+              
+              
+              <% end %>
+            </li>
+            <%end%>
+          </ul>
+          
+          
+        </div> 
+          
+</div>
+ <%end%>
+<% if @category=="4" %>
+<div class='main'>
+        <div class="category-music">
+          <h1>Category</h1>
+          <div class="category">
+            <%= link_to "音楽", "/items/category/4" ,class:"category-name"%>
+          </div>     
+        </div>
+        <div class='item-contents'>
+          <h2 class='title'>Pick Up</h2>
+          <div class="subtitle" >
+            music reviews
+          </div>
+          <ul class='item-lists'>
+      
+            <%@music.each do |music|%>
+            <li class='list'>
+              <%= link_to item_path(music.id),class:"link" do %>
+              <div class='item-img-content'>
+                
+                <%if music.image.attached? %>
+                  <%= image_tag music.image, class: "item-img"  %>
+                <%else%>
+                  <%= image_tag 'soundreview2.png', class: "item-img"  %>
+                <%end%>  
+              </div>
+              <div class='item-info'>
+                
+                <%= music.name%>
+                
+              </div>
+              
+              
+              <% end %>
+            </li>
+            <%end%>
+          </ul>
+          
+          
+        </div> 
+          
+</div>
+ <%end%>
+<% if @category=="5" %>
+<div class='main'>
+        <div class="category-book">
+          <h1>Category</h1>
+          <div class="category">
+            <%= link_to "本", "/items/category/5" ,class:"category-name"%>
+          </div>     
+        </div>
+        <div class='item-contents'>
+          <h2 class='title'>Pick Up</h2>
+          <div class="subtitle" >
+          book reviews
+          </div>
+          <ul class='item-lists'>
+      
+            <%@book.each do |book|%>
+            <li class='list'>
+              <%= link_to item_path(book.id),class:"link" do %>
+              <div class='item-img-content'>
+                
+                <%if book.image.attached? %>
+                  <%= image_tag book.image, class: "item-img"  %>
+                <%else%>
+                  <%= image_tag 'soundreview2.png', class: "item-img"  %>
+                <%end%>  
+              </div>
+              <div class='item-info'>
+                
+                <%= book.name%>
+                
+              </div>
+              
+              
+              <% end %>
+            </li>
+            <%end%>
+          </ul>
+          
+          
+        </div> 
+          
+</div>
+ <%end%>
+<% if @category=="6" %>
+<div class='main'>
+        <div class="category-other">
+          <h1>Category</h1>
+          <div class="category">
+            <%= link_to "その他", "/items/category/6" ,class:"category-name"%>
+          </div>     
+        </div>
+        <div class='item-contents'>
+          <h2 class='title'>Pick Up</h2>
+          <div class="subtitle" >
+          other reviews
+          </div>
+          <ul class='item-lists'>
+      
+            <%@other.each do |other|%>
+            <li class='list'>
+              <%= link_to item_path(other.id),class:"link" do %>
+              <div class='item-img-content'>
+                
+                <%if other.image.attached? %>
+                  <%= image_tag other.image, class: "item-img"  %>
+                <%else%>
+                  <%= image_tag 'soundreview2.png', class: "item-img"  %>
+                <%end%>  
+              </div>
+              <div class='item-info'>
+                
+                <%= other.name%>
+                
+              </div>
+              
+              
+              <% end %>
+            </li>
+            <%end%>
+          </ul>
+          
+          
+        </div> 
+          
+</div>
+ <%end%>
+
+
+
+ <%= render "shared/footer" %>

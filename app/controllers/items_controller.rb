@@ -4,6 +4,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
+    @category = params[:category_id]
   end
 
   def create
@@ -22,7 +23,6 @@ class ItemsController < ApplicationController
   def show
     @message = Message.new
     @messages = @item.messages.includes(:user)
-    
   end
 
   def edit
@@ -41,6 +41,14 @@ class ItemsController < ApplicationController
     redirect_to root_path
   end
 
+  def category
+    @movie = Item.where(category_id:"2")
+    @anime = Item.where(category_id:"3")
+    @music = Item.where(category_id:"4")
+    @book = Item.where(category_id:"5")
+    @other = Item.where(category_id:"6")
+    @category= params[:category_id]
+  end
   private
 
   def item_params
@@ -48,6 +56,8 @@ class ItemsController < ApplicationController
   end
 
   def set_item
+   
     @item = Item.find(params[:id])
+ 
   end
 end

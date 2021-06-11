@@ -112,6 +112,7 @@
           <% end %>
           </div>
         </div>  
+        
         <div class="comments2">
           <h4>＜音声コメント一覧＞</h4>
           <div class="comment2">
@@ -128,11 +129,20 @@
             </p>
           <% end %>
         </div>
+       
       </div>
 
-      
-      
-      <a href="#" class="another-item"><%= @item.category.name %>をもっと見る</a>
+      <%if @item.category.name== "映画" %>
+        <%= link_to "#{@item.category.name}をもっと見る", "/items/category/2" ,class: "another-item" %>
+      <%elsif @item.category.name== "アニメ" %>
+        <%= link_to "#{@item.category.name}をもっと見る", "/items/category/3" ,class: "another-item" %>
+      <%elsif @item.category.name== "音楽" %>
+        <%= link_to "#{@item.category.name}をもっと見る", "/items/category/4" ,class: "another-item" %>
+      <%elsif @item.category.name== "本" %>
+        <%= link_to "#{@item.category.name}をもっと見る", "/items/category/5" ,class: "another-item" %>
+      <%elsif @item.category.name== "その他" %>
+        <%= link_to "#{@item.category.name}をもっと見る", "/items/category/6" ,class: "another-item" %>  
+      <%end%>
       
       </div>
       

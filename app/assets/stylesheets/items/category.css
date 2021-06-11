@@ -1,0 +1,35 @@
+.category-movie{
+  background-image: url("/assets/movie.png");
+  background-size:cover;
+  height:70vh;
+  color:white;
+  padding-top:20px;
+}
+.category-anime{
+  background-image: url("/assets/anime.jpg");
+  background-size:cover;
+  height:70vh;
+  color:white;
+  padding-top:20px;
+}
+.category-music{
+  background-image: url("/assets/music.jpg");
+  background-size:cover;
+  height:70vh;
+  color:white;
+  padding-top:20px;
+}
+.category-book{
+  background-image: url("/assets/book.jpg");
+  background-size:cover;
+  height:70vh;
+  color:white;
+  padding-top:20px;
+}
+.category-other{
+  background-image: url("/assets/cafe.jpg");
+  background-size:cover;
+  height:70vh;
+  color:white;
+  padding-top:20px;
+}
