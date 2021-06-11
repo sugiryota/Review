@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show,:search,:category]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def new
@@ -22,7 +22,7 @@ class ItemsController < ApplicationController
 
   def show
     @message = Message.new
-    @messages = @item.messages.includes(:user)
+    @messages = @item.messages.includes(:user).order('created_at DESC')
   end
 
   def edit
@@ -30,7 +30,7 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
-      redirect_to root_path
+      redirect_to item_path(@item.id)
     else
       render :edit
     end
@@ -48,6 +48,9 @@ class ItemsController < ApplicationController
     @book = Item.where(category_id:"5")
     @other = Item.where(category_id:"6")
     @category= params[:category_id]
+  end
+  def search
+    @items = Item.search(params[:keyword])
   end
   private
 

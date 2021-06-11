@@ -66,7 +66,7 @@
 
 .edit-btn{
   display:flex;
-
+  margin-top:20px;
 }
 .item-red-btn {
   text-align: center;
@@ -237,6 +237,19 @@ audio{
   width:20vw;
   height:10vh;
 }
+.url{
+  
+  font-size:2vw;
+  font-weight: bold;
+  text-align:center
+}
+.item-urll{
+  
+  font-weight: normal;
 
+}
+.text-sound{
+  display: flex;
+}
 
 

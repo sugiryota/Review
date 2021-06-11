@@ -1,0 +1,103 @@
+
+
+        <%if @item.url.present?%>
+        <div class="url">
+          外部URL<br/>
+          <div class="item-urll">
+            <%=link_to "関連サイトへ", @item.url %>
+          </div>  
+        </div>
+        <%end%>
+      
+        
+        <%if user_signed_in?%>
+        <%if current_user.id==@item.user_id %>
+        <div class="edit-btn">
+          <div class="edit">
+            <%= link_to "レビューの編集", edit_item_path, method: :get, class: "item-red-btn" %>
+          </div>  
+          <div class="delete">
+            <%= link_to "削除", item_path, method: :delete, class:"item-destroy" %>
+          </div>
+        </div>  
+        <%end%>
+        <%end%>
+       
+        
+        
+     
+      
+      
+      <div class="comment-box">
+        
+        
+        <% if user_signed_in? %>
+        <h2 class="items-sell-title">コメントを入力</h2>
+          <%= form_with model:[@item,@message], local: true do |f| %>
+          <div class="comment-explain">
+            <div class="weight-bold-comment">
+              ・文字コメント
+            </div>
+            <%= f.text_area :comment, class:"items-comment", id:"comment-info"%>
+            <div class="weight-comment">
+              ・音声コメント
+            </div>
+            <%= f.file_field :audiocomment , class:"sound-comment" %>
+          </div>
+          <div class="sell-btn-contents">
+            <%= f.submit "投稿する" ,class:"comment-btn" %>
+          </div>
+          <%end%>
+        <% else %>
+          <strong><p>※ コメントの投稿には新規登録/ログインが必要です </p></strong>
+        <% end %>
+        <div class="comments">
+          <h4>＜コメント一覧＞</h4>
+          <div class="comment" id="messages">
+          <% @messages.each do |message| %>
+            <p>
+             <% if message.comment.present?%> 
+              <strong><%= message.user.nickname %></strong><br/>
+              <%= message.comment %><br/>
+             <%end%>
+            </p>
+          <% end %>
+          </div>
+        </div>  
+        
+        <div class="comments2">
+          <h4>＜音声コメント一覧＞</h4>
+          <div class="comment2" id="messages">
+          <% @messages.each do |message| %>
+            <p>
+              
+             <% if message.audiocomment.present?%>
+
+              <strong><%= message.user.nickname %></strong>
+              <audio src= "<%= "#{message.audiocomment}" %>" controls="">
+             <%end%> 
+              
+
+            </p>
+          <% end %>
+        </div>
+       
+      </div>
+      
+
+      <%if @item.category.name== "映画" %>
+        <%= link_to "#{@item.category.name}をもっと見る", "/items/category/2" ,class: "another-item" %>
+      <%elsif @item.category.name== "アニメ" %>
+        <%= link_to "#{@item.category.name}をもっと見る", "/items/category/3" ,class: "another-item" %>
+      <%elsif @item.category.name== "音楽" %>
+        <%= link_to "#{@item.category.name}をもっと見る", "/items/category/4" ,class: "another-item" %>
+      <%elsif @item.category.name== "本" %>
+        <%= link_to "#{@item.category.name}をもっと見る", "/items/category/5" ,class: "another-item" %>
+      <%elsif @item.category.name== "その他" %>
+        <%= link_to "#{@item.category.name}をもっと見る", "/items/category/6" ,class: "another-item" %>  
+      <%end%>
+      
+      </div>
+
+
+      <%= render "shared/footer" %>
