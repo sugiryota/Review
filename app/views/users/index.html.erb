@@ -1,0 +1,38 @@
+<%=render "shared/header"%>
+<div class='main'>
+        <div class="user-lists">
+          <h1>ユーザー一覧</h1>   
+        </div>
+        <div class='item-contents'>
+          <h2 class='title'>Pick Up</h2>
+          <div class="subtitle" >
+            user list
+          </div>
+
+       
+          <ul class='item-lists'>
+      
+            <%@users.each do |user|%>
+            <div class="comment-profile">
+                <div class="profile">
+                  <% if user.image.attached? %>
+                    <%= image_tag user.image, class: "user-icon3" %>
+                  <% else %>
+                    <%= image_tag "willy.png", alt: "user-icon", class: "user-icon3" %>
+                  <% end %>
+                </div>
+                <div  class="name-file">
+                  <%= link_to user.nickname, user_path(user.id) ,class: "message-nickname" %>
+                </div>
+            </div>
+            <%end%>
+          </ul>
+          
+          
+          <%= paginate @users %>
+          
+        </div> 
+          
+</div>
+
+<%=render "shared/footer"%>

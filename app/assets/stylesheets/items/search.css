@@ -5,3 +5,10 @@
   color:white;
   padding-top:20px;
 }
+.user-lists{
+  background-image: url("/assets/yama.png");
+  background-size:cover;
+  height:70vh;
+  color:white;
+  padding-top:20px;
+}

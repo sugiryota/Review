@@ -244,7 +244,7 @@ audio{
   height:10vh;
 }
 .sound-comment{
-  margin:10px 0;
+  margin:10px 0 10px 50px;
 }
 .comment-btn{
   font-size:1.7vw;
@@ -282,5 +282,17 @@ audio{
 }
 .message-nickname{
   text-decoration: none;
+}
+.user-icon3{
+  border-radius: 100px;
+  width:55px;
+  height:55px;
+  margin-left:1vw;
+  margin-top:1vh;
+}
+.name-file{
+  margin-top:23px;
+  margin-left:12px;
+  font-size: 22px;
 }
 
