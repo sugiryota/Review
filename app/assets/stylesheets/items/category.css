@@ -33,3 +33,11 @@
   color:white;
   padding-top:20px;
 }
+.user-item{
+  background-image: url("/assets/cafe.jpg");
+  background-size:cover;
+  height:70vh;
+  color:white;
+  padding-top:20px;
+  font-size: 4vw;
+}

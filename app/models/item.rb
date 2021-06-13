@@ -4,7 +4,8 @@ class Item < ApplicationRecord
 
   belongs_to :user
   has_one_attached :image
-  has_many :messages
+  has_many :messages,dependent: :destroy
+  has_many :likes,dependent: :destroy
 
   def self.search(search)
     if search != ""

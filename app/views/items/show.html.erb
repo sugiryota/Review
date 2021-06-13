@@ -14,6 +14,11 @@
         <h2 class="name">
           <%= @item.name %>
         </h2>
+        <div class="good" id="like-link-<%= @item.id %> ">
+          
+          <%= render partial: 'likes/like', locals: { item: @item} %>
+         
+        </div> 
         <div class="item-content">
           <div class="item-img-content">
             <%if @item.image.attached? %>
@@ -22,21 +27,27 @@
               <%= image_tag 'soundreview2.png', class: "item-box-img"  %>
             <%end%>
           </div>
-        </div>  
+        </div> 
+       
         <div class="item-user">
             <div class="revier">Reviewer:</div>
             <div class="profile">
               <% if @item.user.image.attached? %>
                 <%= image_tag @item.user.image, class: "user-icon" %>
               <% else %>
-                <%= image_tag "soundreview2.png", alt: "user-icon", class: "user-icon" %>
+                <%= image_tag "willy.png", alt: "user-icon", class: "user-icon" %>
               <% end %>
             </div>
             
             <div class="item-user-name">
               <%= @item.user.nickname %>
-            </div>
+            </div> <br/>
+            
+            <%= link_to "#{@item.user.nickname}さんの他の投稿へ", user_path(@item.user.id),class: "user-profile" %>
+
         </div> 
+          
+       
         <div class="item-price-box">
           <audio src= "<%= "#{@item.audio}" %>" controls="">
                   
@@ -55,7 +66,7 @@
         </table>
        
         <%end%>
-
+         
         <%if @item.url.present?%>
         <div class="url">
           外部URL<br/>
@@ -64,6 +75,7 @@
           </div>  
         </div>
         <%end%>
+        
       
         
         <%if user_signed_in?%>
@@ -151,8 +163,6 @@
         <%= link_to "#{@item.category.name}をもっと見る", "/items/category/5" ,class: "another-item" %>
       <%elsif @item.category.name== "その他" %>
         <%= link_to "#{@item.category.name}をもっと見る", "/items/category/6" ,class: "another-item" %>  
-      <%end%>
-      
-      </div>
-      
-      <%= render "shared/footer" %>
+      <%end%>    
+    </div>
+  <%= render "shared/footer" %>

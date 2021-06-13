@@ -21,21 +21,29 @@
 .item-content{
   display: flex;
 }
+.good{
+  display: flex;
+  margin-bottom:4px;
+}
+.good-btn{
+  margin-left:8px;
+}
 .item-user{
   display:flex;
-  margin-right:25vw;
+  margin-right:10vw;
   
 }
 
 .revier{
   margin-top:14px;
-  font-size:2.4vw;
+  font-size:20px;
+ 
 }
 .profile{
   margin-top:7px;
 }
 .item-user-name{
-  font-size:2.8vw;
+  font-size:24px;
 }
 .item-profile{
   margin-right:50vw;
@@ -143,7 +151,13 @@ th{
   position: relative;
 }
 
-
+.user-profile{
+  text-decoration: none;
+  margin-top:10px;
+  margin-left:20px;
+  line-height: 45px;
+  width:180px
+}
 
 
 

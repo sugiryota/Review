@@ -1,0 +1,18 @@
+          <%if user_signed_in?%> 
+          <div class="good-btn">
+            <% if current_user.liked_by?(@item.id) %>
+              <%= link_to 'いいねを取り消す', destroy_like_path(@item), method: :delete,remote: true  %>
+              
+            <% else %>
+              <%= link_to 'いいね', create_like_path(@item),method: :post,remote: true  %>
+             
+            <% end %>
+          </div> 
+          <div class="item-count">
+            <%= @item.likes.count%>
+          </div> 
+          <%else %>
+          <div class="item-count">
+            <%= @item.likes.count%>
+          </div> 
+          <%end%>

@@ -23,6 +23,7 @@ class ItemsController < ApplicationController
   def show
     @message = Message.new
     @messages = @item.messages.includes(:user).order('created_at DESC')
+    @like = Like.new
   end
 
   def edit
