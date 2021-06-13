@@ -15,12 +15,13 @@
         <ul class='lists-right'>
           <% if user_signed_in? %>
           <div class="user_nav grid-6">
-            <div class="profile">
+            <div class="profile" >
               <% if current_user.image.attached? %>
                 <%= image_tag current_user.image, class: "user-icon" %>
               <% else %>
                 <%= image_tag "willy.png", alt: "user-icon", size: "200", class: "user-icon" %>
               <% end %>
+
             </div>
             <div class="right-head">
               <%= link_to current_user.nickname, user_path(current_user.id), class: "post" %>
