@@ -1,0 +1,23 @@
+.rank{
+  font-size: 25px;
+  margin-right:135px;
+}
+.rank-lists{
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom:30px;
+}
+.ranking-title{
+  background-image: url("/assets/kumo.png");
+  background-size:cover;
+  height:70vh;
+  color:white;
+  padding-top:20px;
+  
+}
+.ranks{
+  display:flex;
+  flex-direction: column;
+}

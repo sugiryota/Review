@@ -17,6 +17,8 @@ class Item < ApplicationRecord
     end
   end
 
+  
+
   with_options presence: true do
     validates :name
     validates :category_id

@@ -119,39 +119,10 @@
         <% else %>
           <strong><p>※ コメントの投稿には新規登録/ログインが必要です </p></strong>
         <% end %>
-        <div class="comments">
-          <h4>＜コメント一覧＞</h4>
-          <div class="comment" id="messages">
-          <% @messages.each do |message| %>
-            <p>
-             <% if message.comment.present?%> 
-              <strong><%= message.user.nickname %></strong><br/>
-              <%= message.comment %><br/>
-             <%end%>
-            </p>
-          <% end %>
-          </div>
-        </div>  
-        
-        <div class="comments2">
-          <h4>＜音声コメント一覧＞</h4>
-          <div class="comment2" id="messages">
-          <% @messages.each do |message| %>
-            <p>
-              
-             <% if message.audiocomment.present?%>
-
-              <strong><%= message.user.nickname %></strong>
-              <audio src= "<%= "#{message.audiocomment}" %>" controls="">
-             <%end%> 
-              
-
-            </p>
-          <% end %>
-        </div>
-       
-      </div>
-      
+        <tbody id="message">
+           <%= render 'items/comment', messages: @messages %>
+          
+        </td>
 
       <%if @item.category.name== "映画" %>
         <%= link_to "#{@item.category.name}をもっと見る", "/items/category/2" ,class: "another-item" %>

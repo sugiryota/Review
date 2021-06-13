@@ -18,7 +18,9 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all.order('created_at DESC')
+    @ranks = Item.find(Like.group(:item_id).order('count(item_id) DESC').limit(5).pluck(:item_id))
   end
+ 
 
   def show
     @message = Message.new
@@ -53,6 +55,13 @@ class ItemsController < ApplicationController
   def search
     @items = Item.search(params[:keyword])
   end
+  def ranking 
+    @ranks = Item.find(Like.group(:item_id).order('count(item_id) DESC').limit(5).pluck(:item_id))
+  end
+
+
+
+
   private
 
   def item_params

@@ -16,4 +16,5 @@ Rails.application.routes.draw do
     end
   end
   get 'items/category/:category_id' => 'items#category'
+  get 'ranking' => 'items#ranking'
 end

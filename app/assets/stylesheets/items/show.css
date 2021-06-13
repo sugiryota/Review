@@ -265,5 +265,22 @@ audio{
 .text-sound{
   display: flex;
 }
-
+.comment-profile{
+  display:flex;
+  justify-content: center;
+}
+.name-profile{
+  margin-top:14px;
+  margin-left:5px;
+}
+.user-icon2{
+  border-radius: 100px;
+  width:30px;
+  height:30px;
+  margin-left:1vw;
+  margin-top:1vh;
+}
+.message-nickname{
+  text-decoration: none;
+}
 
