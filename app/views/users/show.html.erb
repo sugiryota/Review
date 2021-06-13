@@ -38,7 +38,7 @@
           </div>
           <ul class='item-lists'>
       
-            <%@user.liked_items.each do |post|%>
+            <%@user.like_items.each do |post|%>
             <li class='list'>
               <%= link_to item_path(post.id),class:"link" do %>
               <div class='item-img-content'>

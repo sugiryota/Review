@@ -7,6 +7,7 @@ class Item < ApplicationRecord
   has_many :messages,dependent: :destroy
   has_many :likes,dependent: :destroy
 
+
   def self.search(search)
     if search != ""
       Item.where('text LIKE(?)', "%#{search}%")

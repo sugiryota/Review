@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   end
   post 'like/:id' => 'likes#create', as: 'create_like'
   delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
-  resources :users, only: :show
+  resources :users, only: [:show] do
+    collection do
+      get :likes
+    end
+  end
   get 'items/category/:category_id' => 'items#category'
 end
