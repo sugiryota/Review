@@ -27,10 +27,11 @@
 .new-form{
   width:14vw;
   height:4vh;
+  color:black;
 }
 
 .log{
-  height:6vh;
+  height:35px;
   width:15vw;
   background-color:GREY;
   color:white;
