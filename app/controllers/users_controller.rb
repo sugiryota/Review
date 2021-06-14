@@ -11,11 +11,11 @@ class UsersController < ApplicationController
   end
 
   def followings
-    @followings = @user.following_users
+    @followings = @user.following_users.page(params[:page]).per(16)
   end
 
   def followers
-    @followers = @user.follower_users
+    @followers = @user.follower_users.page(params[:page]).per(16)
   end
 
   private

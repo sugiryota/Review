@@ -7,6 +7,22 @@
   padding-top:20px;
   font-size: 4vw;
 }
+.follow-list{
+  background-image: url("/assets/mati.png");
+  background-size:cover;
+  height:70vh;
+  color:white;
+  padding-top:20px;
+  font-size: 4vw;
+}
+.follower-list{
+  background-image: url("/assets/mon.png");
+  background-size:cover;
+  height:70vh;
+  color:white;
+  padding-top:20px;
+  font-size: 4vw;
+}
 .user-nick{
   font-size: 4vw;
 }

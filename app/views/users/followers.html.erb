@@ -1,17 +1,42 @@
-<h1><%= t("フォロワー") %></h1>
+<%=render "shared/header"%>
+<div class='main'>
+        <div class="follower-list">
+          <h1>フォロワー</h1>   
+        </div>
+        <div class='item-contents'>
+          <h2 class='title'>Pick Up</h2>
+          <div class="subtitle" >
+            user list
+          </div>
 
-<table>
-  <% @followers.each do |user| %>
-    <tr>
-      <td>
-        <% if user.image.attached? %>
-          <%= image_tag user.image.variant(resize_to_limit: [30, 30]) %>
-        <% end %>
-      </td>
-      <td><%= link_to user.nickname, user_path(user) %></td>
+       
+          <ul class='item-lists'>
       
-    </tr>
-  <% end %>
-</table>
+            <% @followers.each do |user| %>
+            <div class="comment-profile">
+                <div class="profile">
+                  <% if user.image.attached? %>
+                    <%= image_tag user.image, class: "user-icon3" %>
+                  <% else %>
+                    <%= image_tag "willy.png", alt: "user-icon", class: "user-icon3" %>
+                  <% end %>
+                </div>
+                <div  class="name-file">
+                  <%= link_to user.nickname, user_path(user.id) ,class: "message-nickname" %>
+                  
+                </div>
+            </div>
+            <%end%>
+          </ul>
+          
+          <%= link_to t("button.back"), user_path %>
+          <%= paginate @followers %>
+          
+        </div> 
+          
+</div>
 
-<%= link_to t("button.back"), user_path %>
+<%=render "shared/footer"%>
+
+
+
