@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show,:search,:category,:ranking]
+  before_action :authenticate_user!, except: [:index, :show,:search,:category,:ranking,:pv_ranking]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+  impressionist :actions => [:show]
 
   def new
     @item = Item.new
@@ -26,6 +27,9 @@ class ItemsController < ApplicationController
     @message = Message.new
     @messages = @item.messages.includes(:user).order('created_at DESC')
     @like = Like.new
+    @views = @item.impressions.size
+    @user = User.find(params[:id])
+    
   end
 
   def edit
@@ -59,7 +63,11 @@ class ItemsController < ApplicationController
     @ranks = Item.find(Like.group(:item_id).order('count(item_id) DESC').limit(5).pluck(:item_id))
     
   end
-
+  def pv_ranking 
+    
+    @pv_ranking = Item.find(Impression.group(:impressionable_id).order('count(impressionable_id) desc').limit(5).pluck(:impressionable_id))
+    
+  end
 
 
 

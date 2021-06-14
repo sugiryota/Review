@@ -37,10 +37,10 @@
             </div>
             
             <div class="item-user-name">
-              <%= @item.user.nickname %>
+              <%= link_to @item.user.nickname, user_path(@item.user.id) %>
             </div> <br/>
             
-            <%= link_to "#{@item.user.nickname}さんの他の投稿へ", user_path(@item.user.id),class: "user-profile" %>
+            
             <div class="good" id="like-link-<%= @item.id %> ">
           
               <%= render partial: 'likes/like', locals: { item: @item} %>
@@ -121,7 +121,7 @@
           <strong><p>※ コメントの投稿には新規登録/ログインが必要です </p></strong>
         <% end %>
         <tbody id="message">
-           <%= render 'items/comment', messages: @messages %>
+           <%= render 'messages/index', messages: @messages %>
           
         </td>
 

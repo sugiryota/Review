@@ -2,27 +2,21 @@
 <div class='main'>
         <div class="user-item">
           <div class="user-nick">
-            <%="#{@user.nickname}の投稿" %> 
+            <%="#{@user.nickname}のホーム" %> 
           </div>  
           <div class="follow">
-            <%if user_signed_in?%>
-            <%unless @user == current_user%>
-              <% if current_user.following?(@user)%>
-                <%=button_to "フォローを解除する",relationship_path,method: :delete ,class: "fllowig-btn" %>
-              <%else%>
-                <%= form_for(@user.followers.build) do |f| %>
-                  <%= hidden_field_tag :follow_id, @user.id %>
-                  <%= f.submit "フォローする" ,class: "follow-btn" %>
-                <% end %>
-              <%end%>
-            <%end%>
-            <%end%> 
+          　<%= render "follow_form" %>
+             
             <p class="follow-count">
-              <%= link_to "#{@user.followers.count} #{User.human_attribute_name("フォロー中")}", followings_user_path %> <%= link_to "#{@user.followings.count} #{User.human_attribute_name("フォロワー")}", followers_user_path %>
+              <%= link_to "#{@user.followers.count} #{User.human_attribute_name("フォロー")}", followings_user_path %> <%= link_to "#{@user.followings.count} #{User.human_attribute_name("フォロワー")}", followers_user_path %>
             </p> 
           </div>     
         </div>
+        <%if user_signed_in? && current_user.id == @user.id%>
+        <div class="myrank">
            
+        </div> 
+        <%end%>  
         <div class='item-contents'>
           <h2 class='title'>Pick Up</h2>
           <div class="subtitle" >
@@ -85,7 +79,41 @@
           
             <% end %>
           </ul>
+          <h2 class='title'>Pick Up</h2>
+          <div class="subtitle" >
+            follow user review
+          </div>
           <%= paginate @user.like_items.page(params[:page]).per(16) %>
+          <ul class='item-lists'>
+      
+            <% @followings.each do |user| %>
+            <%user.items.page(params[:page]).per(16).each do |item|%>
+            <li class='list'>
+              <%= link_to item_path(item.id),class:"link" do %>
+              <div class='item-img-content'>
+                
+                <%if item.image.attached? %>
+                  <%= image_tag item.image, class: "item-img"  %>
+                <%else%>
+                  <%= image_tag 'soundreview2.png', class: "item-img"  %>
+                <%end%>  
+              </div>
+              <div class='item-info'>
+                
+                <%= item.name%>
+                
+              </div>
+              
+              
+              <% end %>
+              
+            </li>
+            <%end%>
+            <%= paginate user.items.page(params[:page]).per(16) %>
+            <% end %>
+          </ul>
+          
+         
         </div> 
           
 </div>

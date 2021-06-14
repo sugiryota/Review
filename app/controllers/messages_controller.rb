@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
 
   def create
-    message = Message.create(message_params)
+    @message = Message.create(message_params)
     redirect_to "/items/#{message.item.id}"
   end
 

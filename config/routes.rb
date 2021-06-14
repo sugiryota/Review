@@ -20,5 +20,6 @@ Rails.application.routes.draw do
   end
   get 'items/category/:category_id' => 'items#category'
   get 'ranking' => 'items#ranking'
+  get 'pv_ranking' => 'items#pv_ranking'
   resources :relationships, only: [:create, :destroy]
 end
