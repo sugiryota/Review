@@ -10,15 +10,12 @@
            <span>Category</span>
            <%= @item.category.name %>
          </div>
+        
        </div> 
         <h2 class="name">
           <%= @item.name %>
         </h2>
-        <div class="good" id="like-link-<%= @item.id %> ">
-          
-          <%= render partial: 'likes/like', locals: { item: @item} %>
-         
-        </div> 
+        
         <div class="item-content">
           <div class="item-img-content">
             <%if @item.image.attached? %>
@@ -30,7 +27,7 @@
         </div> 
        
         <div class="item-user">
-            <div class="revier">Reviewer:</div>
+            
             <div class="profile">
               <% if @item.user.image.attached? %>
                 <%= image_tag @item.user.image, class: "user-icon" %>
@@ -44,7 +41,11 @@
             </div> <br/>
             
             <%= link_to "#{@item.user.nickname}さんの他の投稿へ", user_path(@item.user.id),class: "user-profile" %>
-
+            <div class="good" id="like-link-<%= @item.id %> ">
+          
+              <%= render partial: 'likes/like', locals: { item: @item} %>
+         
+            </div> 
         </div> 
           
        

@@ -12,9 +12,13 @@ Rails.application.routes.draw do
   delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
   resources :users, only: [:show,:index] do
     collection do
-      get :likes
+      get :likes  
+    end
+    member do 
+      get :followings, :followers
     end
   end
   get 'items/category/:category_id' => 'items#category'
   get 'ranking' => 'items#ranking'
+  resources :relationships, only: [:create, :destroy]
 end

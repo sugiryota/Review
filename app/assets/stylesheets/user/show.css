@@ -1,0 +1,27 @@
+
+.user-item{
+  background-image: url("/assets/sora.png");
+  background-size:cover;
+  height:70vh;
+  color:white;
+  padding-top:20px;
+  font-size: 4vw;
+}
+.user-nick{
+  font-size: 4vw;
+}
+.fllowig-btn{
+  font-size: 2vw;
+  color:white;
+  background-color:rgba(180, 50, 78, 0.5);
+}
+.follow-count{
+  font-size: 2vw;
+  color:white;
+  
+}
+.follow-btn{
+  font-size: 2vw;
+  color:white;
+  background-color:rgba(8, 72, 192, 0.5);
+}

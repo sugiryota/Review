@@ -23,7 +23,7 @@
 }
 .good{
   display: flex;
-  margin-bottom:4px;
+  margin-top:22px;
 }
 .good-btn{
   margin-left:8px;
@@ -34,11 +34,7 @@
   
 }
 
-.revier{
-  margin-top:14px;
-  font-size:20px;
- 
-}
+
 .profile{
   margin-top:7px;
 }

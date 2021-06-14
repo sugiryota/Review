@@ -1,8 +1,28 @@
 <%=render "shared/header"%>
 <div class='main'>
         <div class="user-item">
-          <%="#{@user.nickname}の投稿"%>    
+          <div class="user-nick">
+            <%="#{@user.nickname}の投稿" %> 
+          </div>  
+          <div class="follow">
+            <%if user_signed_in?%>
+            <%unless @user == current_user%>
+              <% if current_user.following?(@user)%>
+                <%=button_to "フォローを解除する",relationship_path,method: :delete ,class: "fllowig-btn" %>
+              <%else%>
+                <%= form_for(@user.followers.build) do |f| %>
+                  <%= hidden_field_tag :follow_id, @user.id %>
+                  <%= f.submit "フォローする" ,class: "follow-btn" %>
+                <% end %>
+              <%end%>
+            <%end%>
+            <%end%> 
+            <p class="follow-count">
+              <%= link_to "#{@user.followers.count} #{User.human_attribute_name("フォロー中")}", followings_user_path %> <%= link_to "#{@user.followings.count} #{User.human_attribute_name("フォロワー")}", followers_user_path %>
+            </p> 
+          </div>     
         </div>
+           
         <div class='item-contents'>
           <h2 class='title'>Pick Up</h2>
           <div class="subtitle" >
@@ -38,6 +58,7 @@
           <div class="subtitle" >
             user good review
           </div>
+          
           <ul class='item-lists'>
       
             <%@user.like_items.page(params[:page]).per(16).each do |post|%>
