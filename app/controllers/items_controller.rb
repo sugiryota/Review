@@ -28,8 +28,6 @@ class ItemsController < ApplicationController
     @messages = @item.messages.includes(:user).order('created_at DESC')
     @like = Like.new
     @views = @item.impressions.size
-    @user = User.find(params[:id])
-    
   end
 
   def edit
@@ -61,7 +59,6 @@ class ItemsController < ApplicationController
   end
   def ranking 
     @ranks = Item.find(Like.group(:item_id).order('count(item_id) DESC').limit(5).pluck(:item_id))
-    
   end
   def pv_ranking 
     
