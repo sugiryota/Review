@@ -3,7 +3,11 @@
         <%= link_to image_tag("soundreview.png", class:"top-icon"), "/" %>
 
         <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form",id: "niko") do |f| %>
-          <%= f.text_field :keyword, placeholder: "ボタンにカーソルで音声検索", class: "input-box",id:"result-div" %>
+          <%= f.text_field :keyword,id:"result-div", placeholder: "ボタンをクリックで音声検索", class: "input-box" %>
+          <div id="start-btn2"  class="search-button2">
+            <%= image_tag "maic.png", class:"search-icon2" %>
+           
+          </div>
           <button id="start-btn"  class="search-button">
             <%= image_tag "search.png", class:"search-icon" ,id: "img-btn" %>
            
@@ -36,50 +40,5 @@
           <% end %>
         </ul>
       </div>
-      <script>
-        const startBtn = document.querySelector('#start-btn');
-        const resultDiv = document.getElementById("result-div");
-        const imgBtn = document.getElementById("img-btn")
 
-        SpeechRecognition = webkitSpeechRecognition || SpeechRecognition;
-        let recognition = new SpeechRecognition();
-
-        recognition.lang = 'ja-JP';
-        recognition.interimResults = true;
-        recognition.continuous = true;
-
-        let finalTranscript = ''; 
-
-        recognition.onresult = (event) => {
-          const interimTranscript = event.results[0][0].transcript;
-          
-          resultDiv.value =  interimTranscript ;
-        }
-        
-        startBtn.addEventListener('mouseover', function(){
-          recognition.start();
-          
-          imgBtn.src="/assets/maic.png"
-          
-        })
-        startBtn.addEventListener('mousedown', function(){
-          recognition.start();
-          
-          imgBtn.src="/assets/maic.png"
-          
-        })
-        
-        startBtn.addEventListener('mouseout', function(){
-          recognition.stop();
-          imgBtn.src="/assets/search.png"
-        })
-
-        startBtn.addEventListener('click', function(){
-          recognition.stop();
-          imgBtn.src="/assets/search.png"
-        })
-        
-
-        
-      </script>
 </header>

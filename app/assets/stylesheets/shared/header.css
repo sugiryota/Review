@@ -40,9 +40,23 @@
   cursor: pointer;
   background-color: #ff9b00;
 }
+.search-button2{
+  width: 5vw;
+  height:5vh;
+  border: 0;
+  border:1px solid black;
+  cursor: pointer;
+  background-color: white;
+}
 
 .search-icon {
   width: 60%;
+}
+.search-icon2{
+  width: 44%;
+  margin-bottom:4px;
+  margin-left:8px;
+  
 }
 
 
