@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :messages , only: [:new,:create]
     
     collection do
-      get 'search'
+      get :search,:comment_ranking
     end  
   end
   post 'like/:id' => 'likes#create', as: 'create_like'

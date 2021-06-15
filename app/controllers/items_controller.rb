@@ -55,10 +55,13 @@ class ItemsController < ApplicationController
     @category= params[:category_id]
   end
   def search
-    @items = Item.search(params[:keyword])
+    @items = Item.search(params[:keyword]).page(params[:page]).per(16)
   end
   def ranking 
     @ranks = Item.find(Like.group(:item_id).order('count(item_id) DESC').limit(5).pluck(:item_id))
+  end
+  def comment_ranking
+    @comment_ranks = Item.find(Message.group(:item_id).order('count(item_id) DESC').limit(5).pluck(:item_id))
   end
   def pv_ranking 
     

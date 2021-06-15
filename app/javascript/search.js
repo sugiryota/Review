@@ -1,7 +1,6 @@
 window.addEventListener('load', function(){
 const startBtn = document.querySelector('#start-btn');
 const resultDiv = document.getElementById("result-div");
-const imgBtn = document.getElementById("img-btn");
 const startBtn2 = document.querySelector('#start-btn2');
 const searchIcon = document.querySelector('.search-icon2');
 
@@ -21,39 +20,24 @@ recognition.onresult = (event) => {
   resultDiv.value =  interimTranscript ;
 }
 
-startBtn.addEventListener('mouseover', function(){
-  recognition.start();
-  imgBtn.src="/assets/maic.png"
-  
-  
-})
+
 
 startBtn2.addEventListener('click', function(){
   recognition.start();
   searchIcon.src="/assets/maic2.png"
   
   setTimeout(function(){
+    recognition.stop();
     document.getElementById("start-btn").click();
-  }, 7*1000);
+  }, 5500);
   
-})
-
-startBtn.addEventListener('mousedown', function(){
-  recognition.start();
-  
-  
-  imgBtn.src="/assets/maic.png"
-  
-})
-
-startBtn.addEventListener('mouseout', function(){
-  recognition.stop();
-  imgBtn.src="/assets/search.png"
 })
 
 startBtn.addEventListener('click', function(){
   recognition.stop();
-  imgBtn.src="/assets/search.png"
+})
+resultDiv.addEventListener('change', function(){
+  document.getElementById("start-btn").click();
 })
 
 
