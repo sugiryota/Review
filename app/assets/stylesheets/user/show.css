@@ -41,3 +41,9 @@
   color:white;
   background-color:rgba(8, 72, 192, 0.5);
 }
+.user_matome{
+ width:450px;
+ display:flex;
+ justify-content: space-around;
+ font-size:17px;
+}

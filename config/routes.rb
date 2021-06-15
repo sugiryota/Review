@@ -15,7 +15,7 @@ Rails.application.routes.draw do
       get :likes  
     end
     member do 
-      get :followings, :followers
+      get :followings, :followers,:follow_review,:good_review
     end
   end
   get 'items/category/:category_id' => 'items#category'

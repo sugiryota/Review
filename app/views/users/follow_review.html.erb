@@ -1,0 +1,58 @@
+<%=render "shared/header"%>
+<div class='main'>
+        <div class="user-item">
+          <div class="user-nick">
+            <h1>フォローユーザーレビュー一覧</h1> 
+          </div>      
+        </div>
+        <%if user_signed_in? && current_user.id == @user.id%>
+        <div class="myrank">
+           
+        </div> 
+        <%end%>  
+        <div class='item-contents'>
+          <h2 class='title'>Pick Up</h2>
+          <div class="subtitle" >
+            follow user review
+          </div>
+          <ul class='item-lists'>
+      
+            <% @followings.each do |user| %>
+            <%user.items.page(params[:page]).per(16).each do |item|%>
+            <li class='list'>
+              <%= link_to item_path(item.id),class:"link" do %>
+              <div class='item-img-content'>
+                
+                <%if item.image.attached? %>
+                  <%= image_tag item.image, class: "item-img"  %>
+                <%else%>
+                  <%= image_tag 'soundreview2.png', class: "item-img"  %>
+                <%end%>  
+              </div>
+              <div class='item-info'>
+                
+                <%= item.name%>
+                
+              </div>
+              
+              
+              <% end %>
+              
+            </li>
+            <%end%>
+            <%= paginate user.items.page(params[:page]).per(16) %>
+            <% end %>
+          </ul>
+          <div class="user_matome">
+            <%=link_to "いいねしたレビュー",good_review_user_path ,class:"follow"  %>
+            <%=link_to "#{@user.nickname}のホームへ", user_path, class:"good-r" %>
+          </div>
+         
+        </div> 
+          
+</div>
+
+
+
+
+ <%= render "shared/footer" %>

@@ -1,0 +1,60 @@
+<%=render "shared/header"%>
+<div class='main'>
+        <div class="user-item">
+          <div class="user-nick">
+            <h1>マイグッドレビュー一覧</h1> 
+          </div>      
+        </div>
+        <%if user_signed_in? && current_user.id == @user.id%>
+        <div class="myrank">
+           
+        </div> 
+        <%end%>  
+        <div class='item-contents'>
+          
+
+          <h2 class='title'>Pick Up</h2>
+          <div class="subtitle" >
+            my good review
+          </div>
+          
+          <ul class='item-lists'>
+      
+            <%@user.like_items.page(params[:page]).per(16).each do |post|%>
+            <li class='list'>
+              <%= link_to item_path(post.id),class:"link" do %>
+              <div class='item-img-content'>
+                
+                <%if post.image.attached? %>
+                  <%= image_tag post.image, class: "item-img"  %>
+                <%else%>
+                  <%= image_tag 'soundreview2.png', class: "item-img"  %>
+                <%end%>  
+              </div>
+              <div class='item-info'>
+                
+                <%= post.name%>
+                
+              </div>
+              
+              
+              <% end %>
+              
+            </li>
+          
+            <% end %>
+            <%= paginate @user.like_items.page(params[:page]).per(16) %>
+          </ul>
+          
+          <div class="user_matome">
+            <%=link_to "フォローユーザーレビュー",follow_review_user_path ,class:"follow"  %>
+            <%=link_to "#{@user.nickname}のホームへ", user_path, class:"good-r" %>
+          </div>
+        </div> 
+          
+</div>
+
+
+
+
+ <%= render "shared/footer" %>

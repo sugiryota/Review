@@ -29,7 +29,7 @@
 .fa-thumbs-up{
   font-size: 18px;
 }
-.good-btn{
+.good-btn,.heart{
   margin-left:50px;
 }
 .item-count{
@@ -123,22 +123,24 @@ th{
 }
 
 .detail-item {
-  width: 100%;
-  height:10vh;
-  line-height: 10vh;
+  width: 500px;
+  height:9vh;
+  line-height: 9vh;
   background-color: rgb(105, 168, 228);
   border: 1px solid #dedede;
   font-size: 2.1vw;
   text-align: center;
+  margin:0 auto;
   
 }
 
 .detail-value {
-  width: 100%;
+  width: 500px;
   padding: 20px;
   border: 1px solid #dedede;
   font-size: 14px;
   display:flex;
+  margin:0 auto;
 }
 .item-user-name{
   margin:11px 0 0 10px;
@@ -182,7 +184,8 @@ th{
 }
 
 .comment-btn {
-  line-height: 48px;
+  height:35px;
+  line-height:35px;
   background-color: rgb(105, 168, 228);
   border: 1px solid rgb(105, 168, 228);
   color: #fff;

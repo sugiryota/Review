@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user,only:[:show,:followings,:followers]
+  before_action :set_user,only:[:show,:followings,:followers,:follow_review,:good_review]
 
   def show
     @followings = @user.following_users
@@ -17,6 +17,14 @@ class UsersController < ApplicationController
 
   def followers
     @followers = @user.follower_users.page(params[:page]).per(16)
+  end
+
+  def follow_review
+    @followings = @user.following_users
+  end
+
+  def good_review
+
   end
 
  

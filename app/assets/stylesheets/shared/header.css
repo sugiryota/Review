@@ -40,9 +40,11 @@
   cursor: pointer;
   background-color: #ff9b00;
 }
+
 .search-icon {
-  width: 80%;
+  width: 60%;
 }
+
 
 .lists-right{
   margin-top:0.2vh;
