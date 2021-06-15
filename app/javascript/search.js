@@ -3,6 +3,7 @@ const startBtn = document.querySelector('#start-btn');
 const resultDiv = document.getElementById("result-div");
 const imgBtn = document.getElementById("img-btn");
 const startBtn2 = document.querySelector('#start-btn2');
+const searchIcon = document.querySelector('.search-icon2');
 
 
 SpeechRecognition = webkitSpeechRecognition || SpeechRecognition;
@@ -23,12 +24,14 @@ recognition.onresult = (event) => {
 startBtn.addEventListener('mouseover', function(){
   recognition.start();
   imgBtn.src="/assets/maic.png"
-
+  
   
 })
 
 startBtn2.addEventListener('click', function(){
   recognition.start();
+  searchIcon.src="/assets/maic2.png"
+  
   setTimeout(function(){
     document.getElementById("start-btn").click();
   }, 7*1000);

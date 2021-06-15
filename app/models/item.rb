@@ -12,9 +12,9 @@ class Item < ApplicationRecord
 
   def self.search(search)
     if search != ""
-      Item.where('name LIKE(?)', "%#{search}%")
+      Item.where(['name LIKE(?) OR text LIKE(?) ', "%#{search}%","%#{search}%"])
     else 
-      Item.all
+      Item.includes(:user).order('created_at DESC')
     end
   end
 
