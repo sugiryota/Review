@@ -1,12 +1,13 @@
+
+
 <%=render "shared/second-header"%>
-<div class="contents row">
-  <div class="container">
-    
-    <div class="form-header">
-        <h2>Sign up</h2>
-      
-    </div>    
-    <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+    <div class='ma'>
+        <div class="sign">
+          <div class="form-header">
+          <h1>sign</h1>
+          </div>
+          <%= render 'shared/error_messages', model: @user %>
+          <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <div class="field">
         <div class="weight-bold-text">
           プロフィール画像
@@ -48,12 +49,9 @@
         <%= f.submit "Sign up",class:"log"  %>
       </div>
     <% end %>
-  </div>
-  <div class="right-message">
-    <div class="sign"> 
-      <%= render 'shared/error_messages', model: @user %>
+           
+        </div>
+    
+        <video autoplay muted playsinline src="/videos/sign.mp4", autoplay loop ,class="niko" ></video>    
     </div>
-  </div>    
-  <video autoplay muted playsinline src="/videos/sign.mp4", autoplay loop ></video> 
-</div>
-<%=render "shared/second-footer"%>
+    <%=render "shared/second-footer"%>

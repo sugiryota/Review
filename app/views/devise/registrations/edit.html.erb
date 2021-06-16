@@ -1,12 +1,15 @@
+
+
+
+
 <%=render "shared/second-header"%>
-<div class="contents row">
-  <div class="container">
-    
-    <div class="form-header">
-        <h2>Sign up</h2>
-      
-    </div>    
-    <%= form_with model: @user, id: 'new_user', class: 'new_user', local: true do |f| %>
+    <div class='ma'>
+        <div class="sign">
+          <div class="form-header">
+          <h1>edit profile</h1>
+          </div>
+          <%= render 'shared/error_messages', model: @user %>
+          <%= form_with model: @user, id: 'new_user', class: 'new_user', local: true do |f| %>
       <div class="field">
         <div class="weight-bold-text">
           プロフィール画像
@@ -31,16 +34,16 @@
         <%= f.email_field :email,class:'new-form' %>
       </div>
 
+
       <div class="actions">
         <%= f.submit "update",class:"log"  %>
       </div>
     <% end %>
-  </div>
-  <div class="right-message">
-    <div class="sign"> 
-      <%= render 'shared/error_messages', model: @user %>
+          <div class="delete-acount">
+            <%=link_to "アカウントの削除",user_path(current_user),method: :delete, class:"edit-user"%>
+           </div>
+        </div>
+      
+        <video autoplay muted playsinline src="/videos/sign.mp4", autoplay loop ,class="niko" ></video>    
     </div>
-  </div>    
-  <video autoplay muted playsinline src="/videos/sign.mp4", autoplay loop ></video> 
-</div>
-<%=render "shared/second-footer"%>
+    <%=render "shared/second-footer"%>

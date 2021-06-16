@@ -1,9 +1,13 @@
-<%=render "/shared/second-header"%>
-<div class="contents row">
-  
-  <div class="container">
-    <h2>Log in</h2>
-    <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+
+
+<%=render "shared/second-header"%>
+    <div class='ma'>
+        <div class="sign">
+          <div class="form-header">
+          <h1>log in</h1>
+          </div>
+          <%= render 'shared/error_messages', model: @user %>
+          <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <div class="field">
         <label class="form-text">Eメール</label><br />
         <%= f.email_field :email, autofocus: true ,class: "new-form"  %>
@@ -14,17 +18,13 @@
         <%= f.password_field :password, autocomplete: "off",class: "new-form"  %>
       </div>
 
-     
-
       <div class="actions">
-        <%= f.submit "Log in",class:"log" %>
+        <%= f.submit "Sign up",class:"log"  %>
       </div>
     <% end %>
-  </div>
-  <div class='right-message'>
-    <%= flash[:notice] %>
-    <%= flash[:alert] %>
-  </div> 
-  <video autoplay muted playsinline src="/videos/sign.mp4",playsinline autoplay loop ></video> 
-</div>
-<%=render "/shared/second-footer"%>
+           
+        </div>
+    
+        <video autoplay muted playsinline src="/videos/sign.mp4", autoplay loop ,class="niko" ></video>    
+    </div>
+    <%=render "shared/second-footer"%>

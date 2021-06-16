@@ -38,7 +38,10 @@ class UsersController < ApplicationController
   def good_review
 
   end
-
+  def destroy
+    @user.destroy
+    redirect_to root_path
+  end
  
 
 
