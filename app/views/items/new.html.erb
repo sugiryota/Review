@@ -1,3 +1,4 @@
+
 <div class="items-sell-contents">
   <header class="items-sell-header">
     <%= link_to image_tag('soundreview.png' , size: '185x50'), "/" %>
@@ -32,6 +33,7 @@
         </p>
         <%= f.file_field :image, id:"item-image" %>
       </div>
+      <div id="image-list" ></div>
     </div>
     <div class="new-items">
       <div class="weight-bold-text">
@@ -51,6 +53,7 @@
         </p>
         <%= f.file_field :audio, id:"item-sound" %>
       </div>
+      
     </div>
     <div class="new-items">
       <div class="items-explain">

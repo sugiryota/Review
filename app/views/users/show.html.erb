@@ -10,17 +10,20 @@
             <p class="follow-count">
               <%= link_to "#{@user.followers.count} #{User.human_attribute_name("フォロー")}", followings_user_path %> <%= link_to "#{@user.followings.count} #{User.human_attribute_name("フォロワー")}", followers_user_path %>
             </p> 
+            <%if user_signed_in? && current_user.id == @user.id%>
+            <%=link_to "アカウント情報の編集",edit_user_registration_path(current_user), class:"edit-user"%>
+            <%end%> 
           </div>     
         </div>
         <div class="user_matome">
             <%=link_to "フォローユーザーレビュー",follow_review_user_path ,class:"follow"  %>
             <%=link_to "いいねしたレビュー", good_review_user_path, class:"good-r" %>
         </div>
-        <%if user_signed_in? && current_user.id == @user.id%>
+        
         <div class="myrank">
            
         </div> 
-        <%end%>  
+         
         <div class='item-contents'>
           <h2 class='title'>Pick Up</h2>
           <div class="subtitle" >

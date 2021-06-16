@@ -15,9 +15,9 @@
     <% j=1 %>
     <% @comment_ranks.each.with_index(1) do |item, i| %>
       <%if i==1 %>
-        <%lastFavorite = item.impressions.size %>
+        <%lastFavorite = item.messages.count %>
       <%end%>  
-      <%if item.impressions.size!= lastFavorite%>
+      <%if item.messages.count!= lastFavorite%>
         <% j=i %>
         <div class="rank-box">
     
@@ -54,10 +54,10 @@
                 </li>
            
               </ul>
-          <%lastFavorite = item.impressions.size%>
+          <%lastFavorite = item.messages.count%>
         </div>
       <%else%>
-      <%lastFavorite = item.impressions.size%>
+      <%lastFavorite = item.messages.count%>
       <div class="rank-box">
     
         

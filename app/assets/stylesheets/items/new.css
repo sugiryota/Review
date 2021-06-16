@@ -58,7 +58,7 @@
 
 .img-upload {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   flex-wrap: wrap;
   padding: 2vh 0;
 }
@@ -168,4 +168,13 @@
 
 .inc {
   font-size: 13px;
+}
+img{
+  max-width:100%;
+  height:auto;
+}
+
+.f-img{
+  max-width:450px;
+  height:450px;
 }

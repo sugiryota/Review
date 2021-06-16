@@ -10,6 +10,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("jquery")
 require("../search")
+require("../preview")
 
 
 window.$ = $;

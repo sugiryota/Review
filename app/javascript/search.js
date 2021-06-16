@@ -33,6 +33,7 @@ startBtn2.addEventListener('click', function(){
   
 })
 
+
 startBtn.addEventListener('click', function(){
   recognition.stop();
 })

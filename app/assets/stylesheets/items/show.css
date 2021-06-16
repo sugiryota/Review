@@ -71,7 +71,7 @@
   
 }
 .show-category{
-  font-size:3.5vw;
+  font-size:40px;
 }
 
 
@@ -301,5 +301,9 @@ audio{
   margin-top:23px;
   margin-left:12px;
   font-size: 22px;
+}
+.another-itom{
+  font-size:30px;
+  color:black;
 }
 
