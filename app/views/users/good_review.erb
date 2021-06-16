@@ -5,6 +5,10 @@
             <h1>マイグッドレビュー一覧</h1> 
           </div>      
         </div>
+        <div class="user_matome">
+            <%=link_to "フォローユーザーレビュー",follow_review_user_path ,class:"follow"  %>
+            <%=link_to "#{@user.nickname}のホームへ", user_path, class:"good-r" %>
+          </div>
         <%if user_signed_in? && current_user.id == @user.id%>
         <div class="myrank">
            
@@ -46,11 +50,12 @@
             <%= paginate @user.like_items.page(params[:page]).per(16) %>
           </ul>
           
-          <div class="user_matome">
-            <%=link_to "フォローユーザーレビュー",follow_review_user_path ,class:"follow"  %>
-            <%=link_to "#{@user.nickname}のホームへ", user_path, class:"good-r" %>
-          </div>
+          
         </div> 
+        <%= link_to new_item_path, class: 'item-btn' do %>
+        <span class='item-btn-text'>Post Review</span>
+        <%= image_tag 'icon_camera.png' , size: '79x50' ,class: "item-btn-icon" %>
+        <% end %> 
           
 </div>
 
