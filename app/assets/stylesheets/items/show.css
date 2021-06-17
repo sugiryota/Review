@@ -92,7 +92,7 @@
 .item-red-btn {
   text-align: center;
   background-color: orange;
-  font-size: 2vw;
+  font-size: 20px;
   font-weight: bold;
   color: #FFF;
   margin: 20px 0px;
@@ -104,7 +104,7 @@
 .item-destroy {
   background-color: lightgray;
   text-align: center;
-  font-size: 2vw;
+  font-size: 20px;
   font-weight: bold;
   color: white;
   margin: 20px 0px;
@@ -199,7 +199,8 @@ th{
   border: 1px solid rgb(105, 168, 228);
   color: #fff;
   width: 50%;
-  font-size: 2.2vw;
+  font-size:20px;
+  height:50px;
   font-weight: bold;
   border-radius: 100px;
   
@@ -268,11 +269,7 @@ audio{
 .w-comment{
   font-size:18px;
 }
-.comment-btn{
-  font-size:1.7vw;
-  width:20vw;
-  height:10vh;
-}
+
 .url{
   
   font-size:2vw;
@@ -295,19 +292,25 @@ audio{
   margin-top:14px;
   margin-left:20px;
 }
+.name-profil{
+  margin-top:16px;
+  margin-left:16px;
+}
 .m-comment{
   font-size: 18px;
+  margin-top:5px;
 }
 .user-icon2{
   border-radius: 100px;
-  width:30px;
-  height:30px;
+  width:35px;
+  height:35px;
   margin-left:1vw;
   margin-top:1vh;
 }
 .message-nickname{
   text-decoration: none;
   font-size:20px;
+  
 }
 .user-icon3{
   border-radius: 100px;

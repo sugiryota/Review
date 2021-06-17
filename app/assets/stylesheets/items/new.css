@@ -21,10 +21,11 @@
   width: 70vw;
   min-width: 450px;
   padding: 10vh 15vw;
+  font-size:18px;
 }
 
 .items-sell-title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
 }
@@ -70,7 +71,7 @@
 
 .click-upload>p {
   margin-bottom: 15px;
-  font-size:1.5vw;
+  font-size:18px;
 }
 
 

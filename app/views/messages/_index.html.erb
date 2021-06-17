@@ -5,19 +5,20 @@
               <p>
                <% if message.comment.present?%> 
                <div class="comment-profile">
-                  <div class="profile">
+                  <div class="profil">
                     <% if @item.user.image.attached? %>
                       <%= image_tag @item.user.image, class: "user-icon2" %>
                     <% else %>
                       <%= image_tag "willy.png", alt: "user-icon", class: "user-icon2" %>
                     <% end %>
                   </div>
-                  <div  class="name-profile">
+                  <div  class="name-profil">
                     <%= link_to message.user.nickname, user_path(message.user.id) ,class: "message-nickname" %>
                   </div>
                 </div>  
-
+              <div class="m-comment">
                <%= message.comment %><br/>
+              </div> 
                <%end%>
               </p>
             <% end %>
@@ -32,14 +33,14 @@
               
               <% if message.audiocomment.present?%>
               <div class="comment-profile">
-                <div class="profile">
+                <div class="profil">
                   <% if @item.user.image.attached? %>
                     <%= image_tag @item.user.image, class: "user-icon2" %>
                   <% else %>
                     <%= image_tag "willy.png", alt: "user-icon", class: "user-icon2" %>
                   <% end %>
                 </div>
-                <div  class="name-profile">
+                <div  class="name-profil">
                   <%= link_to message.user.nickname, user_path(message.user.id) ,class: "message-nickname" %>
                 </div>
               </div>

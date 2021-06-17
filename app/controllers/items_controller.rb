@@ -26,6 +26,9 @@ class ItemsController < ApplicationController
   def show
     @message = Message.new
     @messages = @item.messages.includes(:user).order('created_at DESC')
+    @messages.each do |message|
+      @mess = message
+    end
     @like = Like.new
     @views = @item.impressions.size
   end
