@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_one_attached :image
   has_many :items, dependent: :destroy
   has_many :messages, dependent: :destroy
-  has_many :likes,dependent: :destroy
+  has_many :likes, dependent: :destroy
   has_many :like_items, through: :likes, source: :item
 
   has_many :followers,
@@ -21,12 +21,13 @@ class User < ApplicationRecord
            foreign_key: 'following_id',
            dependent: :destroy,
            inverse_of: :following
-  has_many :following_users, through: :followers, source: :following  
+  has_many :following_users, through: :followers, source: :following
   has_many :follower_users, through: :followings, source: :follower
 
   def follow(other_user_id)
     followers.create(following_id: other_user_id)
   end
+
   def following?(other_user)
     following_users.include?(other_user)
   end
@@ -34,7 +35,6 @@ class User < ApplicationRecord
   def unfollow(other_user_id)
     followers.destroy(following_id: other_user_id)
   end
-
 
   def liked_by?(item_id)
     likes.where(item_id: item_id).exists?

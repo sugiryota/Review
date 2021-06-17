@@ -130,10 +130,12 @@
         <% else %>
           <strong><p>※ コメントの投稿には新規登録/ログインが必要です </p></strong>
         <% end %>
+        <%if @mess.present?%>
         <tbody id="message">
            <%= render 'messages/index', messages: @messages %>
           
         </td>
+        <%end%>
 
       <%if @item.category.name== "映画" %>
         <%= link_to "#{@item.category.name}をもっと見る", "/items/category/2" ,class: "another-item" %>

@@ -1,18 +1,15 @@
 class UsersController < ApplicationController
-  before_action :set_user,except:[:index]
+  before_action :set_user, except: [:index]
 
   def show
     @followings = @user.following_users
-   
   end
 
   def index
     @users = User.all.page(params[:page]).per(16)
-    
   end
 
-  def edit 
-
+  def edit
   end
 
   def update
@@ -36,14 +33,12 @@ class UsersController < ApplicationController
   end
 
   def good_review
-
   end
+
   def destroy
     @user.destroy
     redirect_to root_path
   end
- 
-
 
   private
 
@@ -52,7 +47,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:nickname,:email,:image)
+    params.require(:user).permit(:nickname, :email, :image)
   end
-
 end
