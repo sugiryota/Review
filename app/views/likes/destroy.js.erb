@@ -1,1 +1,3 @@
 document.getElementById("like-link-<%= @item.id %> ").innerHTML = '<%= j(render partial: 'likes/like', locals: { item: @item}) %>'
+
+document.getElementById("lik-link-<%= @item.id %> ").innerHTML = '<%= j(render partial: 'likes/like2', locals: { item: @item}) %>'

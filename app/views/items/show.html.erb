@@ -40,9 +40,9 @@
             
             <div class="profile">
               <% if @item.user.image.attached? %>
-                <%= image_tag @item.user.image, class: "user-icon" %>
+                <%= image_tag @item.user.image, class: "user-icon4" %>
               <% else %>
-                <%= image_tag "willy.png", alt: "user-icon", class: "user-icon" %>
+                <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
               <% end %>
             </div>
             
@@ -114,11 +114,11 @@
         <h2 class="items-sell-title">コメントを入力</h2>
           <%= form_with model:[@item,@message], local: true do |f| %>
           <div class="comment-explain">
-            <div class="weight-bold-comment">
+            <div class="weight-bold-comment w-comment">
               ・文字コメント
             </div>
             <%= f.text_area :comment, class:"items-comment", id:"comment-info"%>
-            <div class="weight-comment">
+            <div class="weight-comment w-comment">
               ・音声コメント
             </div>
             <%= f.file_field :audiocomment , class:"sound-comment" %>
@@ -147,4 +147,11 @@
         <%= link_to "#{@item.category.name}をもっと見る", "/items/category/6" ,class: "another-item" %>  
       <%end%>    
     </div>
+    <%if user_signed_in?%> 
+    <div class="good2" id="lik-link-<%= @item.id %> ">
+          
+      <%= render partial: 'likes/like2', locals: { item: @item} %>
+         
+    </div>
+    <%end%> 
   <%= render "shared/footer" %>

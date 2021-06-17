@@ -55,8 +55,8 @@
 }
 .search-icon2{
   width: 44%;
-  margin-bottom:4px;
-  margin-left:8px;
+  margin-top:4px;
+  margin-left:12px;
   
 }
 
@@ -80,12 +80,26 @@
 }
 .user-icon {
   border-radius: 100px;
-  width:36px;
-  height:36px;
-  margin-left:1vw;
+  width:66px;
+  height:66px;
+  margin-right:124px;
   margin-top:1vh;
 }
 .user_nav{
   display:flex;
-}
 
+}
+.nav{
+  padding-left:80px;
+
+  
+}
+.right-head{
+  display:flex;
+  flex-direction: column;
+  width:253px;
+  margin:0 auto;
+}
+.profile{
+  margin:0 auto;
+}

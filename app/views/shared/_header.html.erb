@@ -28,8 +28,12 @@
 
             </div>
             <div class="right-head">
+              <div>
               <%= link_to current_user.nickname, user_path(current_user.id), class: "post" %>
+              </div>
+              <div>
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete ,class:"post" %>
+              </div>
             </div>
           </div>
           <% else %>

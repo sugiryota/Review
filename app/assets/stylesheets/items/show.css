@@ -23,31 +23,40 @@
 }
 .good{
   display: flex;
-  margin-top:20px;
-  width:10px;
+  margin-top:4vh;
+  
+ 
 }
 .fa-thumbs-up{
-  font-size: 18px;
+  font-size: 25px;
 }
 .good-btn,.heart{
-  margin-left:50px;
+  margin-left:90px;
 }
 .item-count{
-  margin-left:8px;
-  font-size: 16px;
+  margin-left:10px;
+  font-size: 18px;
+  margin-top:2px;
 }
 .item-user{
   display:flex;
-  margin-right:10vw;
   
+  
+}
+.profil{
+  margin-top:7px;
+  width:38.81px;
+  height:38.81px;
+
 }
 
 
 .profile{
   margin-top:7px;
+
 }
 .item-user-name{
-  font-size:24px;
+  font-size:31px;
 }
 .item-profile{
   margin-right:50vw;
@@ -123,27 +132,27 @@ th{
 }
 
 .detail-item {
-  width: 500px;
+  width: 45vw;
   height:9vh;
   line-height: 9vh;
   background-color: rgb(105, 168, 228);
   border: 1px solid #dedede;
-  font-size: 2.1vw;
+  font-size: 23px;
   text-align: center;
   margin:0 auto;
   
 }
 
 .detail-value {
-  width: 500px;
+  width: 45vw;
   padding: 20px;
   border: 1px solid #dedede;
-  font-size: 14px;
+  font-size: 18px;
   display:flex;
   margin:0 auto;
 }
 .item-user-name{
-  margin:11px 0 0 10px;
+  margin:2.7vh 0 0 0;
 
 }
 .detail-text{
@@ -249,9 +258,15 @@ audio{
 .items-comment{
   width:40vw;
   height:10vh;
+  font-size: 18px;
 }
 .sound-comment{
-  margin:10px 0 10px 50px;
+  
+  margin:15px auto;
+  font-size:17px;
+}
+.w-comment{
+  font-size:18px;
 }
 .comment-btn{
   font-size:1.7vw;
@@ -278,7 +293,10 @@ audio{
 }
 .name-profile{
   margin-top:14px;
-  margin-left:5px;
+  margin-left:20px;
+}
+.m-comment{
+  font-size: 18px;
 }
 .user-icon2{
   border-radius: 100px;
@@ -289,12 +307,20 @@ audio{
 }
 .message-nickname{
   text-decoration: none;
+  font-size:20px;
 }
 .user-icon3{
   border-radius: 100px;
   width:55px;
   height:55px;
   margin-left:1vw;
+  margin-top:1vh;
+}
+.user-icon4{
+  border-radius:100px;
+  width:66px;
+  height:66px;
+  margin-right:30px;
   margin-top:1vh;
 }
 .name-file{
@@ -307,3 +333,6 @@ audio{
   color:black;
 }
 
+.ii{
+  font-size: 37px;
+}
