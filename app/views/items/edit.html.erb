@@ -19,6 +19,12 @@
         
         <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
       </div>
+      <div class="new-items">
+      <div class="weight-bold-text">
+        サブカテゴリー
+      </div>
+      <%= f.text_area :minicategory, class:"items-text", id:"item-name" %>
+    </div> 
     </div>    
     <div class="img-upload">
       <div class="weight-bold-text">

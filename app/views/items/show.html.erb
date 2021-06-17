@@ -6,18 +6,18 @@
       <div class="item-box">
         <div class="item-profile">
 
-         <div > 
+         <div class="cate-name"> 
            <span class="show-category">Category</span><br/>
            <%if @item.category.name== "映画" %>
-            <%= link_to "#{@item.category.name}", "/items/category/2" ,class: "another-itom" %>
+            <%= link_to "#{@item.category.name}", "/items/category/2" ,class: "another-itom" %><br/><p class="mini-name"><%=@item.minicategory%><p>
            <%elsif @item.category.name== "アニメ" %>
-            <%= link_to "#{@item.category.name}", "/items/category/3" ,class: "another-itom" %>
+            <%= link_to "#{@item.category.name}", "/items/category/3" ,class: "another-itom" %><br/><p class="mini-name"><%=@item.minicategory%><p>
            <%elsif @item.category.name== "音楽" %>
-            <%= link_to "#{@item.category.name}", "/items/category/4" ,class: "another-itom" %>
+            <%= link_to "#{@item.category.name}", "/items/category/4" ,class: "another-itom" %><br/><p class="mini-name"><%=@item.minicategory%><p>
            <%elsif @item.category.name== "本" %>
-            <%= link_to "#{@item.category.name}", "/items/category/5" ,class: "another-itom" %>
+            <%= link_to "#{@item.category.name}", "/items/category/5" ,class: "another-itom" %><br/><p class="mini-name"><%=@item.minicategory%><p>
            <%elsif @item.category.name== "その他" %>
-            <%= link_to "#{@item.category.name}", "/items/category/6" ,class: "another-itom" %>  
+            <%= link_to "#{@item.category.name}", "/items/category/6" ,class: "another-itom" %><br/><p class="mini-name"><%=@item.minicategory%><p>
            <%end%>
          </div>
         
