@@ -40,9 +40,9 @@
             
             <div class="profile">
               <% if @item.user.image.attached? %>
-                <%= image_tag @item.user.image, class: "user-icon4" %>
+                <%= image_tag @item.user.image, class: "user-icon5" %>
               <% else %>
-                <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
+                <%= image_tag "willy.png", alt: "user-icon", class: "user-icon5" %>
               <% end %>
             </div>
             
@@ -51,12 +51,16 @@
             </div> <br/>
             
             
+            
             <div class="good" id="like-link-<%= @item.id %> ">
           
               <%= render partial: 'likes/like', locals: { item: @item} %>
          
             </div> 
         </div> 
+        <div>
+          <%=@item.created_at.strftime('%Y/%m/%d')%>
+        </div>  
           
        
         <div class="item-price-box">

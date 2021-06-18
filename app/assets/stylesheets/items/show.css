@@ -321,6 +321,13 @@ audio{
 }
 .user-icon4{
   border-radius:100px;
+  width:55px;
+  height:55px;
+  margin-right:30px;
+  margin-top:2vh;
+}
+.user-icon5{
+  border-radius:100px;
   width:66px;
   height:66px;
   margin-right:30px;
