@@ -29,6 +29,13 @@
   font-weight: bold;
   text-align: center;
 }
+.items-comment-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top:50px;
+  border:1px solid black;
+}
 
 .indispensable {
   margin-left: 8px;
@@ -125,7 +132,7 @@
   color: #fff;
   width: 53%;
   height: 50px;
-  font-size: 14px;
+  font-size: 18px;
   margin: 4vh 0;
   border-radius: 30px;
 }

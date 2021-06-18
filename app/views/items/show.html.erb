@@ -135,6 +135,8 @@
            <%= render 'messages/index', messages: @messages %>
           
         </td>
+        <%else%>
+          <h2 class="items-comment-title">コメント</h2>
         <%end%>
 
       <%if @item.category.name== "映画" %>
