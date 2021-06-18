@@ -33,6 +33,8 @@
 .good-btn,.heart{
   margin-left:90px;
 }
+
+
 .item-count{
   margin-left:10px;
   font-size: 18px;
@@ -317,7 +319,8 @@ audio{
 }
 .message-nickname{
   text-decoration: none;
-  font-size:20px;
+  font-size:18px;
+  margin-left:15px;
   
 }
 .user-icon3{

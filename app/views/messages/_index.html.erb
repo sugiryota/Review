@@ -7,9 +7,13 @@
                <div class="comment-profile">
                   <div class="profil">
                     <% if @item.user.image.attached? %>
-                      <%= image_tag @item.user.image, class: "user-icon2" %>
+                      <%=link_to user_path(message.user.id),class:"user-icon2" do %>
+                        <%= image_tag @item.user.image, class: "user-icon2" %>
+                      <%end%>  
                     <% else %>
-                      <%= image_tag "willy.png", alt: "user-icon", class: "user-icon2" %>
+                      <%=link_to user_path(@item.user.id) ,class:"user-icon2" do %>
+                        <%= image_tag "willy.png", alt: "user-icon", class: "user-icon2" %>
+                      <%end%>
                     <% end %>
                   </div>
                   <div  class="name-profil">
@@ -34,12 +38,16 @@
               <% if message.audiocomment.present?%>
               <div class="comment-profile">
                 <div class="profil">
-                  <% if @item.user.image.attached? %>
-                    <%= image_tag @item.user.image, class: "user-icon2" %>
-                  <% else %>
-                    <%= image_tag "willy.png", alt: "user-icon", class: "user-icon2" %>
-                  <% end %>
-                </div>
+                    <% if @item.user.image.attached? %>
+                      <%=link_to user_path(message.user.id),class:"user-icon2" do %>
+                        <%= image_tag @item.user.image, class: "user-icon2" %>
+                      <%end%>  
+                    <% else %>
+                      <%=link_to user_path(@item.user.id) ,class:"user-icon2" do %>
+                        <%= image_tag "willy.png", alt: "user-icon", class: "user-icon2" %>
+                      <%end%>
+                    <% end %>
+                  </div>
                 <div  class="name-profil">
                   <%= link_to message.user.nickname, user_path(message.user.id) ,class: "message-nickname" %>
                 </div>

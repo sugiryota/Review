@@ -15,12 +15,16 @@
             <%@users.each do |user|%>
             <div class="comment-profile">
                 <div class="profile">
-                  <% if user.image.attached? %>
-                    <%= image_tag user.image, class: "user-icon3" %>
-                  <% else %>
-                    <%= image_tag "willy.png", alt: "user-icon", class: "user-icon3" %>
-                  <% end %>
-                </div>
+                <% if user.image.attached? %>
+                  <%=link_to user_path(user.id),class:"user-icon4" do %>
+                    <%= image_tag user.image, class: "user-icon4" %>
+                  <%end%>  
+                <% else %>
+                  <%=link_to user_path(user.id) ,class:"user-icon4" do %>
+                    <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
+                  <%end%>
+                <% end %>
+              </div>
                 <div  class="name-file">
                   <%= link_to user.nickname, user_path(user.id) ,class: "message-nickname" %>
                 </div>

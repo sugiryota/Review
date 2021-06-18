@@ -31,13 +31,17 @@
                 <%end%>  
               </div>
               <div class="profile-all">
-              <div class="profile">
-                <% if movie.user.image.attached? %>
-                  <%= image_tag movie.user.image, class: "user-icon4" %>
-                <% else %>
-                  <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
-                <% end %>
-              </div>
+              <div class="profile2">
+                    <% if movie.user.image.attached? %>
+                      <%=link_to user_path(movie.user.id),class:"user-icon4" do %>
+                        <%= image_tag movie.user.image, class: "user-icon4" %>
+                      <%end%>  
+                    <% else %>
+                      <%=link_to user_path(movie.user.id) ,class:"user-icon4" do %>
+                        <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
+                      <%end%>
+                    <% end %>
+                  </div>
               <div class="item-create">
                 <div class="item-user-name">
                   <%= link_to movie.user.nickname, user_path(movie.user.id) %>
@@ -93,13 +97,17 @@
                 <%end%>  
               </div>
               <div class="profile-all">
-              <div class="profile">
-                <% if anime.user.image.attached? %>
-                  <%= image_tag anime.user.image, class: "user-icon4" %>
-                <% else %>
-                  <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
-                <% end %>
-              </div>
+              <div class="profile2">
+                    <% if anime.user.image.attached? %>
+                      <%=link_to user_path(anime.user.id),class:"user-icon4" do %>
+                        <%= image_tag anime.user.image, class: "user-icon4" %>
+                      <%end%>  
+                    <% else %>
+                      <%=link_to user_path(anime.user.id) ,class:"user-icon4" do %>
+                        <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
+                      <%end%>
+                    <% end %>
+                  </div>
               <div class="item-create">
                 <div class="item-user-name">
                   <%= link_to anime.user.nickname, user_path(anime.user.id) %>
@@ -154,13 +162,17 @@
                 <%end%>  
               </div>
               <div class="profile-all">
-              <div class="profile">
-                <% if music.user.image.attached? %>
-                  <%= image_tag music.user.image, class: "user-icon4" %>
-                <% else %>
-                  <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
-                <% end %>
-              </div>
+              <div class="profile2">
+                    <% if music.user.image.attached? %>
+                      <%=link_to user_path(music.user.id),class:"user-icon4" do %>
+                        <%= image_tag music.user.image, class: "user-icon4" %>
+                      <%end%>  
+                    <% else %>
+                      <%=link_to user_path(music.user.id) ,class:"user-icon4" do %>
+                        <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
+                      <%end%>
+                    <% end %>
+                  </div>
               <div class="item-create">
                 <div class="item-user-name">
                   <%= link_to music.user.nickname, user_path(music.user.id) %>
@@ -215,13 +227,17 @@
                 <%end%>  
               </div>
               <div class="profile-all">
-              <div class="profile">
-                <% if book.user.image.attached? %>
-                  <%= image_tag book.user.image, class: "user-icon4" %>
-                <% else %>
-                  <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
-                <% end %>
-              </div>
+              <div class="profile2">
+                    <% if book.user.image.attached? %>
+                      <%=link_to user_path(book.user.id),class:"user-icon4" do %>
+                        <%= image_tag book.user.image, class: "user-icon4" %>
+                      <%end%>  
+                    <% else %>
+                      <%=link_to user_path(book.user.id) ,class:"user-icon4" do %>
+                        <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
+                      <%end%>
+                    <% end %>
+                  </div>
               <div class="item-create">
                 <div class="item-user-name">
                   <%= link_to book.user.nickname, user_path(book.user.id) %>
@@ -276,13 +292,17 @@
                 <%end%>  
               </div>
               <div class="profile-all">
-              <div class="profile">
-                <% if other.user.image.attached? %>
-                  <%= image_tag other.user.image, class: "user-icon4" %>
-                <% else %>
-                  <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
-                <% end %>
-              </div>
+              <div class="profile2">
+                    <% if other.user.image.attached? %>
+                      <%=link_to user_path(other.user.id),class:"user-icon4" do %>
+                        <%= image_tag other.user.image, class: "user-icon4" %>
+                      <%end%>  
+                    <% else %>
+                      <%=link_to user_path(other.user.id) ,class:"user-icon4" do %>
+                        <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
+                      <%end%>
+                    <% end %>
+                  </div>
               <div class="item-create">
                 <div class="item-user-name">
                   <%= link_to other.user.nickname, user_path(other.user.id) %>

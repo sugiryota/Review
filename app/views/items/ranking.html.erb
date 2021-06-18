@@ -50,11 +50,15 @@
                    <%end%>  
                   </div>
                   <div class="profile-all">
-                  <div class="profile">
+                  <div class="profile2">
                     <% if item.user.image.attached? %>
-                      <%= image_tag item.user.image, class: "user-icon4" %>
+                      <%=link_to user_path(item.user.id),class:"user-icon4" do %>
+                        <%= image_tag item.user.image, class: "user-icon4" %>
+                      <%end%>  
                     <% else %>
-                      <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
+                      <%=link_to user_path(item.user.id) ,class:"user-icon4" do %>
+                        <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
+                      <%end%>
                     <% end %>
                   </div>
                   <div class="item-create">
@@ -108,13 +112,17 @@
                 <%end%>  
               </div>
               <div class="profile-all">
-              <div class="profile">
-                <% if item.user.image.attached? %>
-                  <%= image_tag item.user.image, class: "user-icon4" %>
-                <% else %>
-                  <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
-                <% end %>
-              </div>
+              <div class="profile2">
+                    <% if item.user.image.attached? %>
+                      <%=link_to user_path(item.user.id),class:"user-icon4" do %>
+                        <%= image_tag item.user.image, class: "user-icon4" %>
+                      <%end%>  
+                    <% else %>
+                      <%=link_to user_path(item.user.id) ,class:"user-icon4" do %>
+                        <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
+                      <%end%>
+                    <% end %>
+                  </div>
               <div class="item-create">
                 <div class="item-user-name">
                   <%= link_to item.user.nickname, user_path(item.user.id) %>

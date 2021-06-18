@@ -1,4 +1,4 @@
-          
+          <%if user_signed_in?%>
           <div class="good-btn2">
             <% if current_user.liked_by?(@item.id) %>
               <%= link_to  destroy_like_path(@item), method: :delete,remote: true do %>
@@ -11,6 +11,7 @@
               <%end%>  
             <% end %>
           </div> 
+          <%end%>
           
           
           

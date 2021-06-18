@@ -45,7 +45,8 @@
                   <%= image_tag item.image, class: "item-img"  %>
                 <%else%>
                   <%= image_tag 'soundreview2.png', class: "item-img"  %>
-                <%end%>  
+                <%end%> 
+                 
               </div>
               <div class="profile-all">
               <div class="profile2">
@@ -58,6 +59,7 @@
                     <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
                   <%end%>
                 <% end %>
+                
               </div>
               <div class="item-create">
                 <div class="item-user-name">
@@ -66,8 +68,13 @@
                 <div class="created_at" >
                     <%=item.created_at.strftime('%Y/%m/%d')%>
                 </div>
+                
               
               </div>
+              <div class="good-county">
+                    <i class="fas fa-thumbs-up"></i>      <%=item.likes.count%>
+              </div> 
+              
               <% end %>
             </li>
             <%end%>
