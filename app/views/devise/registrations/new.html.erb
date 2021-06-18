@@ -20,7 +20,8 @@
           <%= f.file_field :image, id:"item-image" %>
         </div>
       </div>
-
+      <div class="matome">
+      <div>
       <div class="field">
         <label class="form-text">ニックネーム</label><br />
         
@@ -31,7 +32,8 @@
         <label class="form-text">Eメール</label><br />
         <%= f.email_field :email,class:'new-form' %>
       </div>
-
+      </div>
+      <div class="pass">
       <div class="field">
         <label class="form-text">パスワード</label>
         <% if @minimum_password_length %>
@@ -44,10 +46,12 @@
         <label class="form-text">パスワード(確認)</label><br/>
         <%= f.password_field :password_confirmation, autocomplete: "off",class:'new-form' %>
       </div>
-
-      <div class="actions">
+      </div>
+      </div>
+      <div class="actions-s">
         <%= f.submit "Sign up",class:"log"  %>
       </div>
+      
     <% end %>
            
         </div>

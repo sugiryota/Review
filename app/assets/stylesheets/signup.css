@@ -21,24 +21,31 @@
   font-size:3vw;
 }
 .field{
-  font-size: 1.4vw;
+  font-size: 18px;
   margin-bottom:6px;
 }
 .new-form{
-  width:14vw;
+  width:150px;
   height:4vh;
   color:black;
+  font-size: 18px;
 }
 
 .log{
   height:40px;
   width:15vw;
+  line-height: 30px;
   background-color:GREY;
   color:white;
-  font-size:2vw;
+  font-size:25px;
+  
 }
 .actions{
   margin-top:1vh;
+}
+.actions-s{
+  margin-top:1vh;
+  margin-left:110px;
 }
 .right-message{
   position: absolute;
@@ -50,4 +57,11 @@
 }
 .field{
   margin:15px 0;
+}
+.matome{
+  display:flex;
+  align-items: center;
+}
+.pass{
+  margin-left:70px;
 }
