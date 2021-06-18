@@ -53,11 +53,15 @@
 
 .profile{
   margin-top:7px;
+  width:90px;
 
 }
-.item-user-name{
-  font-size:31px;
+.profile2{
+  
+  width:90px;
+  margin-top:7px;
 }
+
 .item-profile{
   margin-right:50vw;
   display: flex;
@@ -153,7 +157,11 @@ th{
 }
 .item-user-name{
   margin:2.7vh 0 0 0;
-
+  font-size:18px;
+}
+.item-user-name{
+  font-size:26px;
+  margin:2.7vh 0 0 0;
 }
 .detail-text{
   height:25vh;
