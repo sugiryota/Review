@@ -47,12 +47,16 @@
                         <%= image_tag "willy.png", alt: "user-icon", class: "user-icon2" %>
                       <%end%>
                     <% end %>
-                  </div>
+                </div>
                 <div  class="name-profil">
                   <%= link_to message.user.nickname, user_path(message.user.id) ,class: "message-nickname" %>
                 </div>
+                
               </div>
-                <audio src= "<%= "#{message.audiocomment}" %>" controls="">
+              <div class="au-comm">
+                <audio src= "<%= "#{message.audiocomment}" %>" controls="" preload="metadata">
+                </div>
+                
               <%end%> 
               
 
