@@ -55,6 +55,12 @@
   background-color:red;
   padding:1px;
 }
+.edi-user{
+  font-size: 20px;
+  color:white;
+  background-color:rgb(48, 153, 194);
+  padding:1px;
+}
 .sign{
  
   color:white;

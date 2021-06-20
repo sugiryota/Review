@@ -11,7 +11,7 @@
               <%= link_to "#{@user.followers.count} #{User.human_attribute_name("フォロー")}", followings_user_path %> <%= link_to "#{@user.followings.count} #{User.human_attribute_name("フォロワー")}", followers_user_path %>
             </p> 
             <%if user_signed_in? && current_user.id == @user.id%>
-            <%=link_to "アカウント情報の編集",edit_user_registration_path(current_user), class:"edit-user"%>
+            <%=link_to "アカウント情報の編集",edit_user_registration_path(current_user), class:"edi-user"%>
             <%end%> 
             <% if user_signed_in? && current_user.id == @user.id%>
             <li><%= link_to '通知', notifications_path, class: "footer-link" %></li>
