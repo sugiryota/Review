@@ -68,7 +68,6 @@ gem 'jquery-rails'
 gem 'font-awesome-sass'
 gem 'kaminari'
 gem 'impressionist'
-
 group :development do
   gem 'rubocop', require: false
 end
