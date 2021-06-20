@@ -1,7 +1,12 @@
 class MessagesController < ApplicationController
   def create
-    @message = Message.create(message_params)
-    redirect_to "/items/#{@message.item.id}"
+    @item = Item.find(params[:item_id])
+    @message = @item.messages.new(message_params)
+    if @message.save
+      redirect_to "/items/#{@message.item.id}"
+      @message.item.create_notification_message!(current_user, @message.id)
+      
+    end
   end
 
   private

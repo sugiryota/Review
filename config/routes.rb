@@ -3,13 +3,13 @@ Rails.application.routes.draw do
   root to: 'items#index'
   resources :items do
     resources :messages , only: [:new,:create]
+    resource :likes, only: [:create, :destroy]
     
     collection do
       get :search,:comment_ranking
     end  
   end
-  post 'like/:id' => 'likes#create', as: 'create_like'
-  delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
+
   resources :users, only: [:show,:index,:edit,:update,:destroy] do
     collection do
       get :likes  
@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   get 'ranking' => 'items#ranking'
   get 'pv_ranking' => 'items#pv_ranking'
   resources :relationships, only: [:create, :destroy]
+  resources :notifications, only: [:index, :destroy]
 end

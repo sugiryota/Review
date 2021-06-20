@@ -1,0 +1,14 @@
+<%= render "shared/header" %>
+<h3 class="text-center">通知</h3>
+    <div class="noti-deli deli">
+    <%= link_to "通知削除", notification_path(@notifications), method: :delete  %> 
+    </div>
+       
+<% if @notifications.exists? %>
+    <div class="users-index">
+        <%= render @notifications %>
+    </div>
+<% else %>
+    <p class="noti-deli">通知はありません</p>
+<% end %>
+<%= render "shared/footer" %>
