@@ -7,6 +7,9 @@
 <% if @notifications.exists? %>
     <div class="users-index">
         <%= render @notifications %>
+        <div class="pege">
+        <%= paginate @notifications%>
+        </div>
     </div>
 <% else %>
     <p class="noti-deli noti">通知はありません</p>

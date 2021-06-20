@@ -137,6 +137,12 @@ video{
   background-color: #FFF;
   
 }
+@media screen and (max-width: 480px) { 
+  .item-lists>.list {
+    width:50%;
+    padding: 1vw;
+    background-color: #FFF;
+}}
 .link{
   text-decoration: none;
 }

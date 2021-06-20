@@ -23,7 +23,9 @@
           <ul>
             <li><%= link_to 'SoundReviewガイド', "#", class: "footer-link" %></li>
             <li><%= link_to 'SoundReviewロゴ利用ガイドライン', "#", class: "footer-link" %></li>
+            <% if user_signed_in?%>
             <li><%= link_to '通知', notifications_path, class: "footer-link" %></li>
+            <%end%>
           </ul>
         </div>
       </div>
