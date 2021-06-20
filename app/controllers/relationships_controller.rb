@@ -3,6 +3,7 @@ class RelationshipsController < ApplicationController
     user = User.find(params[:follow_id])
     current_user.follow(params[:follow_id])
     redirect_to user_path(user)
+    user.create_notification_follow!(current_user)
   end
 
   def destroy
