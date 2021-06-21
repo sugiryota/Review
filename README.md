@@ -72,7 +72,7 @@
 #### 文字検索
 [![Image from Gyazo](https://i.gyazo.com/7fc33753c5e2f96e1e18996b7a6749c7.gif)](https://gyazo.com/7fc33753c5e2f96e1e18996b7a6749c7)
 #### 音声検索
-[![Image from Gyazo](https://i.gyazo.com/4fa65e788557091966229af3325ac1be.gif)](https://gyazo.com/4fa65e788557091966229af3325ac1be)
+[![Image from Gyazo](https://i.gyazo.com/8b4183e5064246ccd14b72676310b7b3.gif)](https://gyazo.com/8b4183e5064246ccd14b72676310b7b3)
 ### ・ユーザー関連
 #### ユーザー一覧
 [![Image from Gyazo](https://i.gyazo.com/aa27814869296300f84bdb136c09c6f9.jpg)](https://gyazo.com/aa27814869296300f84bdb136c09c6f9)
