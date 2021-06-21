@@ -58,7 +58,7 @@
 ### ・コメントの投稿
 [![Image from Gyazo](https://i.gyazo.com/9e494055f1411dfb23f056f05904b536.gif)](https://gyazo.com/9e494055f1411dfb23f056f05904b536)
 ### ・カテゴリーベージ
-[![Image from Gyazo](https://i.gyazo.com/31f73bb065d4783ffac4c0941d34469f.gif)](https://gyazo.com/31f73bb065d4783ffac4c0941d34469f)
+[![Image from Gyazo](https://i.gyazo.com/2bd3ba202081fc98551efb7b93ee8bbd.gif)](https://gyazo.com/2bd3ba202081fc98551efb7b93ee8bbd)
 ### ・いいね機能
 [![Image from Gyazo](https://i.gyazo.com/8557b688ea102ae1795d07a82b326f74.gif)](https://gyazo.com/8557b688ea102ae1795d07a82b326f74)
 ### ・ランキング機能
@@ -81,7 +81,7 @@
 #### ユーザー編集ページ
 [![Image from Gyazo](https://i.gyazo.com/de139116aef526a29e9c119acf097af8.jpg)](https://gyazo.com/de139116aef526a29e9c119acf097af8)
 ### ・アカウントのフォロー
-[![Image from Gyazo](https://i.gyazo.com/2f4d789cec13bc64ffe937a1ef5fd92f.gif)](https://gyazo.com/2f4d789cec13bc64ffe937a1ef5fd92f)
+[![Image from Gyazo](https://i.gyazo.com/f06d4a84208a359975bb580474f23050.gif)](https://gyazo.com/f06d4a84208a359975bb580474f23050)
 ### ・通知機能
 [![Image from Gyazo](https://i.gyazo.com/da75a006f39366ac6a7620485198382b.png)](https://gyazo.com/da75a006f39366ac6a7620485198382b)
 
