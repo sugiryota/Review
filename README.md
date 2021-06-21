@@ -1,7 +1,7 @@
 # SoundReview
 ## 音声レビューの投稿サイトです。
 ## レビューしたいものについて音声で紹介ができ、また閲覧ができます。 
-![Uploading スクリーンショット 2021-06-21 15.18.04.png…]()
+<img width="1199" alt="スクリーンショット 2021-06-21 15 18 04" src="https://user-images.githubusercontent.com/83449662/122715504-ef3a2700-d2a3-11eb-93d5-f5fcf00882bb.png">
 
 
 
