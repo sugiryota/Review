@@ -1,28 +1,23 @@
   <div class='footer'>
       <div class='footer-contents'>
         <div class='sound-details'>
-          <h2 class='footer-content-head'>SoundReviewについて</h2>
-          <ul>
-            <li><%= link_to '会社概要（運営会社)', "#", class: "footer-link" %></li>
-            <li><%= link_to 'プライバシーポリシー', "#", class: "footer-link" %></li>
-            <li><%= link_to 'SoundReview利用規約', "#", class: "footer-link" %></li>
-          </ul>
-        </div>
-        <div class='sound-details'>
-          <h2 class='footer-content-head'>Reviewを見る</h2>
+          <h2 class='footer-content-head'>一覧</h2>
           <ul>
             <li><%= link_to 'カテゴリー一覧', root_path, class: "footer-link" %></li>
-            <li><%= link_to 'レビューランキング', ranking_path, class: "footer-link" %></li>
-            <li><%= link_to 'アクセス数ランキング', pv_ranking_path, class: "footer-link" %></li>
-            <li><%= link_to 'コメント数ランキング', comment_ranking_items_path, class: "footer-link" %></li>
             <li><%= link_to 'ユーザー一覧', users_path, class: "footer-link" %></li>
           </ul>
         </div>
         <div class='sound-details'>
-          <h2 class='footer-content-head'>SoundReviewについて</h2>
+          <h2 class='footer-content-head'>ランキング</h2>
           <ul>
-            <li><%= link_to 'SoundReviewガイド', "#", class: "footer-link" %></li>
-            <li><%= link_to 'SoundReviewロゴ利用ガイドライン', "#", class: "footer-link" %></li>
+            <li><%= link_to 'レビューランキング', ranking_path, class: "footer-link" %></li>
+            <li><%= link_to 'アクセス数ランキング', pv_ranking_path, class: "footer-link" %></li>
+            <li><%= link_to 'コメント数ランキング', comment_ranking_items_path, class: "footer-link" %></li>           
+          </ul>
+        </div>
+        <div class='sound-details'>
+          <h2 class='footer-content-head'>通知</h2>
+          <ul>
             <% if user_signed_in?%>
             <li><%= link_to '通知', notifications_path, class: "footer-link" %></li>
             <%end%>
