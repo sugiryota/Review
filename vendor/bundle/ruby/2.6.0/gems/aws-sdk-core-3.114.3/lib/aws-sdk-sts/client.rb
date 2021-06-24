@@ -643,7 +643,7 @@ module Aws::STS
     #   requires MFA authentication. The value is either the serial number for
     #   a hardware device (such as `GAHT12345678`) or an Amazon Resource Name
     #   (ARN) for a virtual device (such as
-    #   `arn:aws:iam::123456789012:mfa/user`).
+    #   `arn:aws:iam::AWS_SECRET_ACCESS_KEY:mfa/user`).
     #
     #   The regex used to validate this parameter is a string of characters
     #   consisting of upper- and lower-case alphanumeric characters with no
@@ -1689,7 +1689,7 @@ module Aws::STS
     #
     #   resp.to_h outputs the following:
     #   {
-    #     account: "123456789012", 
+    #     account: "", 
     #     arn: "arn:aws:sts::123456789012:assumed-role/my-role-name/my-role-session-name", 
     #     user_id: "AKIAI44QH8DHBEXAMPLE:my-role-session-name", 
     #   }
@@ -1704,7 +1704,7 @@ module Aws::STS
     #
     #   resp.to_h outputs the following:
     #   {
-    #     account: "123456789012", 
+    #     account: "", 
     #     arn: "arn:aws:sts::123456789012:federated-user/my-federated-user-name", 
     #     user_id: "123456789012:my-federated-user-name", 
     #   }
