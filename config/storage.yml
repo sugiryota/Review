@@ -11,8 +11,8 @@ amazon:
  service: S3
  region: ap-northeast-1
  bucket: test2525252
- access_key_id: <%= ENV['AKIA4XKZXKFCVREOROOO'] %>
- secret_access_key:  <%= ENV['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'] %>
+ access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+ secret_access_key:  <%= ENV['AWS_ACCESS_KEY_ID'] %>
 
 
 
