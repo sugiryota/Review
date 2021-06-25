@@ -20,7 +20,6 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all.order('created_at DESC').limit(12)
     @ranks = Item.find(Like.group(:item_id).order('count(item_id) DESC').limit(5).pluck(:item_id))
-   
   end
 
   def show

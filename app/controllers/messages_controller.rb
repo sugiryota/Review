@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
     if @message.save
       redirect_to "/items/#{@message.item.id}"
       @message.item.create_notification_message!(current_user, @message.id)
-      
+
     end
   end
 

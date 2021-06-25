@@ -6,8 +6,8 @@ FactoryBot.define do
     audio { File.open("#{Rails.root}/spec/fixtures/voice/music.mp3") }
     minicategory { Faker::Lorem.word }
     association :user
-    url {'hhhh.com'}
-    impressions_count {123}
+    url { 'hhhh.com' }
+    impressions_count { 123 }
     after(:build) do |user|
       user.image.attach(io: File.open('public/images/maic.png'), filename: 'test_image.png')
     end
