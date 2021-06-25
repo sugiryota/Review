@@ -1676,7 +1676,7 @@ module Aws::STS
     #   {
     #     account: "123456789012", 
     #     arn: "arn:aws:iam::123456789012:user/Alice", 
-    #     user_id: "AWS_ACCESS_KEY_ID", 
+    #     user_id: "AKIAI44QH8DHBEXAMPLE", 
     #   }
     #
     # @example Example: To get details about a calling user federated with AssumeRole
@@ -1691,7 +1691,7 @@ module Aws::STS
     #   {
     #     account: "123456789012", 
     #     arn: "arn:aws:sts::123456789012:assumed-role/my-role-name/my-role-session-name", 
-    #     user_id: "AWS_ACCESS_KEY_ID:my-role-session-name", 
+    #     user_id: "AKIAI44QH8DHBEXAMPLE:my-role-session-name", 
     #   }
     #
     # @example Example: To get details about a calling user federated with GetFederationToken
