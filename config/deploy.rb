@@ -43,7 +43,7 @@ set :repo_url, "git@example.com:sugiryota/Review.git"
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 # config valid for current version and patch releases of Capistrano
-lock '3.16.0'
+lock "3.16.0"
 
 
 # Capistranoのログの表示に利用する
