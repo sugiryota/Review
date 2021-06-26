@@ -24,7 +24,7 @@ recognition.onresult = (event) => {
 
 startBtn2.addEventListener('click', function(){
   recognition.start();
-  searchIcon.src="/assets/maic2.png"
+  searchIcon.src="/images/maic2.png"
   
   setTimeout(function(){
     recognition.stop();
