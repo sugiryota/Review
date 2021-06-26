@@ -1,5 +1,5 @@
 
-lock "~> 3.16.0"
+lock " 3.16.0"
 
 set :application, "Review"
 set :repo_url, "git@github.com:sugiryouta/Review.git"
