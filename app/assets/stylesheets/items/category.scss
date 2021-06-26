@@ -7,28 +7,28 @@
 }
 
 .category-anime{
-  background-image: url("/assets/anime.jpg");
+  background-image: image-url("anime.jpg");
   background-size:cover;
   height:70vh;
   color:white;
   padding-top:20px;
 }
 .category-music{
-  background-image: url("/assets/music.jpg");
+  background-image: image-url("music.jpg");
   background-size:cover;
   height:70vh;
   color:white;
   padding-top:20px;
 }
 .category-book{
-  background-image: url("/assets/book.jpg");
+  background-image: image-url("book.jpg");
   background-size:cover;
   height:70vh;
   color:white;
   padding-top:20px;
 }
 .category-other{
-  background-image: url("/assets/cafe.jpg");
+  background-image: image-url("/assets/cafe.jpg");
   background-size:cover;
   height:70vh;
   color:white;
