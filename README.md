@@ -5,6 +5,7 @@
 <img width="1199" alt="スクリーンショット 2021-06-21 15 18 04" src="https://user-images.githubusercontent.com/83449662/122715504-ef3a2700-d2a3-11eb-93d5-f5fcf00882bb.png">
 
 ## 2. URL
+### http://18.178.137.200/
 
 ## 3. テスト用アカウント
 ### ・アカウント
