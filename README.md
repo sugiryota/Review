@@ -90,15 +90,13 @@
 ### ・通知機能
 [![Image from Gyazo](https://i.gyazo.com/da75a006f39366ac6a7620485198382b.png)](https://gyazo.com/da75a006f39366ac6a7620485198382b)
 
-## 8.実装予定の機能
-#### 
 
 ## 9.データーベース設計
 [![Image from Gyazo](https://i.gyazo.com/efd9900a15d57c20c77f32a036ef3850.png)](https://gyazo.com/efd9900a15d57c20c77f32a036ef3850)
 
 ## 10.ローカルでの動作方法
 ### rubyのバージョン
-#### 2.6.6p146
+#### 2.6.6
 ### railsのバージョン
 #### 6.0.4
 
@@ -108,113 +106,30 @@
 #### bundle install
 #### yarn install
 
+## 11.使用開発言語
+### ・言語
+#### html,css,scss,ruby,javascript,jQuery
+### ・フレームワーク
+#### Ruby on Rails
+### ・DB 
+#### mysql
+### ・サーバー
+#### AWS
+
+## 12.今後実装したい機能
+### ・無限スクロール(ページネーション)
+### ・Remember me 機能
+### ・パスワード再発行機能
+### ・コメント投稿、フォロー機能の非同期通信
+### ・Liveでのレビュー配信
+### ・サイト上でのレビュー録音
+### ・Twitterとの連携
 
 
 
 
 
 
-# テーブル設計
-
-## users テーブル
-
-| Column            | Type       | Options                 |
-| ----------------- | ---------- | ----------------------- |
-| nickname          | string     | null: false             |
-| email             | string     | null: false,unique:true |
-| encrypted_password| string     | null: false             |
 
 
 
-
-### Association
-
-- has_many  :items
-- has_many  :comments
-- has_many  :likes
-- has_many :followers
-- has_many :followings
-- has_many :follower_users
-- has_many :following_users
-- has_many :passive_notifications
-- has_many :active_notifications
-
-
-
-## items テーブル
-
-| Column              | Type        | Options         |
-| ------------------- | ----------- | --------------- |
-| name                | string      | null: false     | 
-| text                | text        |                 |
-| audio               | string      | null: false     |
-| category_id         | integer     | null: false     |
-| url                 | string      |                 | 
-| user                | references  |foreign_key:true |
-
-### Association
-
-- belongs_to  :user
-- has_many    :comments
-- has_many    :likes
-- has_many :notifications, dependent: :destroy
-
-
-## comments テーブル
-
-| Column      | Type       | Options     |
-| ----------- | ---------- | ----------- |
-| comment     | text       | null: false |
-| user        | references |             |
-| item        | references |             |
-| audiocomment| string     |             |
-
-### Association
-
-- belongs_to  :user
-- belongs_to  :item
-
-## likes テーブル
-
-| Column      | Type       | Options     |
-| ----------- | ---------- | ----------- |
-| item_id     | integer    | null: false |
-| user_id     | integer    | null: false |
-
-
-### Association
-
-- belongs_to  :user
-- belongs_to  :item
-
-## relationships テーブル
-
-| Column      | Type       | Options     |
-| ----------- | ---------- | ----------- |
-| follower_id | integer    | null: false |
-| following_id| integer    | null: false |
-
-
-### Association
-
-- belongs_to :follower
-- belongs_to :following
-
-## notifications テーブル
-
-| Column      | Type       | Options     |
-| ----------- | ---------- | ----------- |
-| visiter_id  | integer    |             |
-| visited_id  | integer    |             |
-| item_id     | integer    |             |
-| message_id  | integer    |             |
-| action      | string     |             |
-| checked     | boolean    | null: false |
-
-
-### Association
-
-- belongs_to :item
-- belongs_to :message
-- belongs_to :visiter
-- belongs_to :visited
