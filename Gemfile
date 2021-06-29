@@ -69,6 +69,8 @@ gem 'font-awesome-sass'
 gem 'kaminari'
 gem 'impressionist'
 gem 'rack-attack'
+gem 'rails_admin', '~> 2.0.0.beta'
+gem 'cancancan'
 group :development do
   gem 'rubocop', require: false
 end
