@@ -68,10 +68,12 @@ gem 'jquery-rails'
 gem 'font-awesome-sass'
 gem 'kaminari'
 gem 'impressionist'
+gem 'rack-attack'
 group :development do
   gem 'rubocop', require: false
 end
 gem "aws-sdk-s3", require: false
+
 group :production do
   gem 'unicorn', '5.4.1'
 end
