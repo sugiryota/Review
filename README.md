@@ -90,6 +90,9 @@
 
 ### ・通知機能
 [![Image from Gyazo](https://i.gyazo.com/da75a006f39366ac6a7620485198382b.png)](https://gyazo.com/da75a006f39366ac6a7620485198382b)
+### ・管理者用ページ
+[![Image from Gyazo](https://i.gyazo.com/f796c825d3fe5accc7fe1aa0bd6fb406.png)](https://gyazo.com/f796c825d3fe5accc7fe1aa0bd6fb406)
+
 
 
 ## 9.データーベース設計
