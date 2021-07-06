@@ -65,7 +65,10 @@ video{
   font-weight: bold;
 }
 
-
+.item-user-name{
+  font-size:26px;
+  margin:2.7vh 0 0 0;
+}
 
 
 
@@ -212,6 +215,71 @@ audio{
 
 .pagination>li>a:hover {        
   border-radius: 15px;    
+}
+
+@media screen and (max-width: 500px){
+  .item-lists{
+    flex-direction: column;
+    align-items: center;
+    margin-right:55px;
+  }
+  .item-btn{
+    width:90px;
+    height:80px;
+    right:16px;
+    margin-bottom:145px;
+  }
+  .item-btn-text{
+    font-size:16px;
+  }
+  .item-btn-icon{
+    height:20px;
+    width:50px;
+   
+  }
+  .list{
+    margin-bottom:30px;
+  }
+  .good-county{
+    margin-left:50px;
+  }
+  .item-user-name{
+    font-size:20px;
+    margin-top:23px;
+  }
+  .item-info{
+    font-size:25px;
+    font-weight: normal;
+  }
+  .item-contents {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3vh 0;
+  
+  }
+  .category{
+    font-size:14px;
+  }
+  .categories{
+  
+    position: absolute;
+    left: 1vh;
+    top: 1vh;
+    z-index: 1;
+  }
+  .categories h1{
+    font-family:serif;         
+    color: white;
+    font-size:20px;
+  
+  }
+  .item-contents>.title {
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: bold;
+  }
 }
 
 

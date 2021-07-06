@@ -35,3 +35,15 @@ li{
   color:white;
   font-size:1.5vw;
 }
+@media screen and (max-width: 500px){
+  .footer-content-head{
+    width:90px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .sound-details{
+    margin:0 0vw;
+  
+  }
+}
