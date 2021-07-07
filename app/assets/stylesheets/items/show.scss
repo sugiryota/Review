@@ -154,7 +154,7 @@ th{
 }
 
 .detail-value {
-  width: 100vw;
+  width: 45vw;
   padding: 20px;
   border: 1px solid #dedede;
   font-size: 18px;
@@ -364,6 +364,12 @@ audio{
 .pass{
   margin-left:70px;
 }
+.twitter{
+  font-size:30px;
+  height:85px;
+  line-height:85px;
+  margin-left:30px;
+}
 
 
 @media screen and (max-width: 480px){
@@ -447,7 +453,9 @@ audio{
   width:250px;
   margin-left:100px;
 }
-
+.detail-value {
+  width: 100vw;
+}
   
 
 }

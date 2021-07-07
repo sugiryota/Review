@@ -59,8 +59,12 @@
             <div class="good" id="like-link-<%= @item.id %> ">
           
               <%= render partial: 'likes/like', locals: { item: @item} %>
+               
          
             </div> 
+              <%= link_to  "https://twitter.com/share?url=おすすめレビュー #{@item.name}   #{request.url}", title: 'Twitter', target: '_blank',class:"twitter" do%>
+                <i class="fab fa-twitter"></i>
+              <%end%> 
         </div> 
         <div>
           <%=@item.created_at.strftime('%Y/%m/%d')%>
@@ -95,6 +99,7 @@
         </div>
         <%end%>
         
+              
       
         
         <%if user_signed_in?%>
