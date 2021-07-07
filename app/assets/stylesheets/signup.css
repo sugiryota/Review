@@ -43,10 +43,7 @@
 .actions{
   margin-top:1vh;
 }
-.actions-s{
-  margin-top:1vh;
-  margin-left:110px;
-}
+
 .right-message{
   position: absolute;
   top:30vh;
@@ -58,10 +55,4 @@
 .field{
   margin:15px 0;
 }
-.matome{
-  display:flex;
-  align-items: center;
-}
-.pass{
-  margin-left:70px;
-}
+

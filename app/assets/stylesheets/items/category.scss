@@ -35,3 +35,9 @@
   color:white;
   padding-top:20px;
 }
+@media screen and (max-width: 480px){
+  .category-movie,.category-anime,.category-music,.category-book,.category-other{
+    height:40vh;
+
+  }
+}

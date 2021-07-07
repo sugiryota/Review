@@ -154,7 +154,7 @@ th{
 }
 
 .detail-value {
-  width: 45vw;
+  width: 100vw;
   padding: 20px;
   border: 1px solid #dedede;
   font-size: 18px;
@@ -361,6 +361,9 @@ audio{
   padding: 10px ;
   text-decoration: none;
 }
+.pass{
+  margin-left:70px;
+}
 
 
 @media screen and (max-width: 480px){
@@ -421,6 +424,28 @@ audio{
 }
 .ii{
   font-size: 23px;
+}
+.detail-item {
+  width: 100vw;
+  height:8vh;
+  line-height: 9vh;
+  background-color: rgb(105, 168, 228);
+  border: 1px solid #dedede;
+  font-size: 23px;
+  text-align: center;
+  margin:0 auto;
+  
+}
+.profile2{
+  
+  width:50px;
+}
+.pass{
+  margin-left:43px;
+}
+.field .weight-bold-text{
+  width:250px;
+  margin-left:100px;
 }
 
   
