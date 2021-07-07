@@ -7,7 +7,7 @@ window.addEventListener('load', function(){
         opacity:0,
         origin:'top',
         mobile: 'true',
-        reset: 'true'
+       
       });
       
       ScrollReveal().reveal('.item-lists',{  
@@ -16,7 +16,7 @@ window.addEventListener('load', function(){
         opacity:0,
         origin:'top',
         mobile: 'true',
-        reset: 'true'
+        
       });
     
   })

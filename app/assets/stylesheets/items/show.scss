@@ -9,6 +9,7 @@
 }
 
 .item-box {
+  
   background-color: #FFF;
   width:90vw;
   
@@ -16,6 +17,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.mini-name{
+  font-size: 15px;
 }
 
 .item-content{
@@ -276,8 +280,7 @@ audio{
 
 .url{
   
-  font-size:2vw;
-  font-weight: bold;
+  font-size:18px;
   text-align:center
 }
 .item-urll{
@@ -344,4 +347,82 @@ audio{
 
 .ii{
   font-size: 37px;
+}
+.good2{
+  width: 70px;
+  height:70px;
+  text-align: center;
+  border-radius: 100%;
+  border:3px solid red;
+  bottom: 100px;
+  right: 100px;
+  position: fixed;
+  z-index:13;
+  padding: 10px ;
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 480px){
+  .item-box {
+  
+    background-color: #FFF;
+    width:90vw;
+    
+    padding: 3px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .show-category{
+    font-size:30px;
+  }
+  .another-itom{
+    font-size:22px;
+  }
+  .mini-name{
+    font-size: 18px;
+  }
+  .item-box > .name {
+    text-align: center;
+    font-weight:inherit;
+    font-size: 30px;
+  }  
+  .item-box-img{
+    height:260px;
+  }
+  .profile{
+    width:50px;
+  }
+  .item-price-box{
+    width:120vw;
+  }
+  .comment-box{
+    width:100vw;
+  }
+  .items-comment{
+    width:90vw;
+  }
+  .profil {
+    margin-top: 3px;
+}
+.good2 {
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  border-radius: 100%;
+  border: 3px solid red;
+  bottom: 50px;
+  right: 10px;
+  position: fixed;
+  z-index: 13;
+  padding: 10px;
+  text-decoration: none;
+}
+.ii{
+  font-size: 23px;
+}
+
+  
+
 }

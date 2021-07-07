@@ -140,6 +140,10 @@
   }
   .nav{
     padding-left:2px;
+    width:300px;
+  }
+  .user_sign{
+    width:65px;
   }
   .input-box{
     font-size:4px;
@@ -153,7 +157,7 @@
     width:30px;
     height:30px;
    
-    margin-top:2vh;
+    margin-top:24px;
   }
 }
 
