@@ -31,4 +31,18 @@
 .pege{
   margin-left:45vw;
 }
+@media screen and (max-width: 480px){
+  .user-view{
+    width:100vw;
+  }
+  .users-index{
+    margin-bottom:36px;
+    padding-bottom:3vh;
+  }
+  .noti{
+    width:50vw;
+    padding-bottom:50vh;
+    
+  }
+}
 
