@@ -3,20 +3,20 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'items#index'
   resources :items do
-    resources :messages , only: [:new,:create]
+    resources :messages, only: [:new, :create]
     resource :likes, only: [:create, :destroy]
-    
+
     collection do
-      get :search,:comment_ranking
-    end  
+      get :search, :comment_ranking
+    end
   end
 
-  resources :users, only: [:show,:index,:edit,:update,:destroy] do
+  resources :users, only: [:show, :index, :edit, :update, :destroy] do
     collection do
-      get :likes  
+      get :likes
     end
-    member do 
-      get :followings, :followers,:follow_review,:good_review
+    member do
+      get :followings, :followers, :follow_review, :good_review
     end
   end
   get 'items/category/:category_id' => 'items#category'

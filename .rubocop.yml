@@ -68,3 +68,6 @@ Style/FrozenStringLiteralComment:
 
 Naming/MethodParameterName:
  MinNameLength: 1
+  
+AllCops:
+  SuggestExtensions: false
