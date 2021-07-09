@@ -44,7 +44,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'brakeman', :require => false
-  
+  gem 'rubocop', require: false
 end
 
 group :test do
@@ -71,9 +71,6 @@ gem 'impressionist'
 gem 'rack-attack'
 gem 'rails_admin', '~> 2.0.0.beta'
 gem 'cancancan'
-group :development do
-  gem 'rubocop', require: false
-end
 gem "aws-sdk-s3", require: false
 
 group :production do
