@@ -16,7 +16,7 @@
             <% if user_signed_in? && current_user.id == @user.id%>
             <li><%= link_to '通知', notifications_path, class: "footer-link" %></li>
             <%end%>
-            <% if current_user.admin? %>
+            <% if user_signed_in? && current_user.admin? %>
             <li><%= link_to '管理者用ページ', rails_admin_path, class: "footer-link" %></li>
             <% end %>
           </div>     
