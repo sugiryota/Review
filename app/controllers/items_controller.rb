@@ -18,7 +18,7 @@ class ItemsController < ApplicationController
   end
 
   def index
-    @items = Item.all.order('created_at DESC').limit(12)
+    @items = Item.includes(:user).all.order('created_at DESC').limit(12)
     @ranks = Item.find(Like.group(:item_id).order('count(item_id) DESC').limit(5).pluck(:item_id))
   end
 
