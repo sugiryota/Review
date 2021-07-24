@@ -9,12 +9,13 @@ Rails.application.routes.draw do
     collection do
       get :search, :comment_ranking
     end
+    member do
+      get :like_user
+    end
+
   end
 
   resources :users, only: [:show, :index, :edit, :update, :destroy] do
-    collection do
-      get :likes
-    end
     member do
       get :followings, :followers, :follow_review, :good_review
     end

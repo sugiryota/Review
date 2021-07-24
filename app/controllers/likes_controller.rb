@@ -1,6 +1,6 @@
 class LikesController < ApplicationController
+  before_action :set_item
   def create
-    @item = Item.find(params[:item_id])
     like = current_user.likes.new(item_id: @item.id)
     like.save
 
@@ -12,7 +12,11 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    @item = Item.find(params[:item_id])
     @like = Like.find_by(user_id: current_user.id, item_id: @item.id).destroy
   end
+  private
+  def set_item
+    @item = Item.find(params[:item_id])
+  end
+
 end

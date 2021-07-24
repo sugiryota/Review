@@ -7,6 +7,7 @@ class Item < ApplicationRecord
   has_one_attached :image
   has_many :messages, dependent: :destroy
   has_many :likes, dependent: :destroy
+  has_many :like_users, through: :likes, source: :user
 
   has_many :notifications, dependent: :destroy
 

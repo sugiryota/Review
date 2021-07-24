@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :search, :category, :ranking, :pv_ranking, :comment_ranking]
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_item, only: [:show, :edit, :update, :destroy,:like_user]
   impressionist actions: [:show]
 
   def new
@@ -71,6 +71,9 @@ class ItemsController < ApplicationController
 
   def pv_ranking
     @pv_ranking = Item.find(Impression.group(:impressionable_id).order('count(impressionable_id) desc').limit(5).pluck(:impressionable_id))
+  end
+  def like_user
+    
   end
 
   private
