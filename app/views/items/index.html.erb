@@ -72,9 +72,11 @@
                 
               
               </div>
+              <%= link_to like_user_item_path(item.id),class:"link" do %>
               <div class="good-county">
                     <i class="fas fa-thumbs-up"></i>      <%=item.likes.count%>
               </div> 
+              <%end%>
               
               <% end %>
             </li>
