@@ -28,9 +28,11 @@
                   <li class="rank">
                     <%= j %>位  
                   </li>
+                  <%= link_to like_user_item_path(item.id),class:"link" do %>
                   <li class="good-count">
                     いいね数：<%=item.likes.count%>
                   </li>
+                  <%end%>
               
                 </div>  
                 <li class='list'>
@@ -90,9 +92,11 @@
               <li class="rank">
                 <%= j %>位  
               </li>
+              <%= link_to like_user_item_path(item.id),class:"link" do %>
               <li class="good-count">
                 いいね数：<%=item.likes.count%>
               </li>
+              <%end%>
               
             </div>
             <li class='list'>
