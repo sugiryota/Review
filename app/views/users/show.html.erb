@@ -5,7 +5,7 @@
             <%="#{@user.nickname}のホーム" %> 
           </div>  
           <div class="follow">
-          　<%= render "follow_form" %>
+            <%= render "follow_form" %>
              
             <p class="follow-count">
               <%= link_to "#{@user.followers.count} #{User.human_attribute_name("フォロー")}", followings_user_path %> <%= link_to "#{@user.followings.count} #{User.human_attribute_name("フォロワー")}", followers_user_path %>
