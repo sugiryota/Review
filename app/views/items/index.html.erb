@@ -31,56 +31,8 @@
           </div>
           <ul class='item-lists'>
       
-            <%@items.each do |item|%>
-            <li class='list'>
-              <%= link_to item_path(item.id),class:"link" do %>
-              <div class='item-info'>
-                
-                <%= item.name%>
-                
-                
-              </div>
-              <div class='item-img-content'>
-                
-                <%if item.image.attached? %>
-                  <%= image_tag item.image, class: "item-img"  %>
-                <%else%>
-                  <%= image_tag 'soundreview2.png', class: "item-img"  %>
-                <%end%> 
-                 
-              </div>
-              <div class="profile-all">
-              <div class="profile2">
-                <% if item.user.image.attached? %>
-                  <%=link_to user_path(item.user.id),class:"user-icon4" do %>
-                    <%= image_tag item.user.image, class: "user-icon4" %>
-                  <%end%>  
-                <% else %>
-                  <%=link_to user_path(item.user.id) ,class:"user-icon4" do %>
-                    <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
-                  <%end%>
-                <% end %>
-                
-              </div>
-              <div class="item-create">
-                <div class="item-user-name">
-                  <%= link_to item.user.nickname, user_path(item.user.id) %>
-                </div> 
-                <div class="created_at" >
-                    <%=item.created_at.strftime('%Y/%m/%d')%>
-                </div>
-                
+            <%= item_lists(@items) %>
               
-              </div>
-              <%= link_to like_user_item_path(item.id),class:"link" do %>
-              <div class="good-county">
-                    <i class="fas fa-thumbs-up"></i>      <%=item.likes.count%>
-              </div> 
-              <%end%>
-              
-              <% end %>
-            </li>
-            <%end%>
           </ul>
           
           
