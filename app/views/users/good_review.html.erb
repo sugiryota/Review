@@ -73,7 +73,7 @@
             </li>
           
             <% end %>
-            <%= paginate @user.page(params[:page]).per(16) %>
+            <%= paginate @user.items.page(params[:page]).per(16) %>
           </ul>
           
           

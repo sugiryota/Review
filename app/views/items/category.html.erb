@@ -14,50 +14,7 @@
           </div>
           <ul class='item-lists'>
       
-            <%@movie.each do |movie|%>
-            <li class='list'>
-              <%= link_to item_path(movie.id),class:"link" do %>
-              <div class='item-info'>
-                
-                <%= movie.name%>
-               
-              </div>
-              <div class='item-img-content'>
-                
-                <%if movie.image.attached? %>
-                  <%= image_tag movie.image, class: "item-img"  %>
-                <%else%>
-                  <%= image_tag 'soundreview2.png', class: "item-img"  %>
-                <%end%>  
-              </div>
-              <div class="profile-all">
-              <div class="profile2">
-                    <% if movie.user.image.attached? %>
-                      <%=link_to user_path(movie.user.id),class:"user-icon4" do %>
-                        <%= image_tag movie.user.image, class: "user-icon4" %>
-                      <%end%>  
-                    <% else %>
-                      <%=link_to user_path(movie.user.id) ,class:"user-icon4" do %>
-                        <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
-                      <%end%>
-                    <% end %>
-                  </div>
-              <div class="item-create">
-                <div class="item-user-name">
-                  <%= link_to movie.user.nickname, user_path(movie.user.id) %>
-                </div> 
-                <div class="created_at" >
-                    <%=movie.created_at.strftime('%Y/%m/%d')%>
-                </div>
-              
-              </div>
-              </div>
-              
-              
-              
-              <% end %>
-            </li>
-            <%end%>
+           <%= item_lists(@movie) %>
           </ul>
           <%= paginate @movie %>
           
@@ -79,50 +36,7 @@
             anime reviews
           </div>
           <ul class='item-lists'>
-      
-            <%@anime.each do |anime|%>
-            <li class='list'>
-              <%= link_to item_path(anime.id),class:"link" do %>
-              <div class='item-info'>
-                
-                <%= anime.name%>
-                
-              </div>
-              <div class='item-img-content'>
-                
-                <%if anime.image.attached? %>
-                  <%= image_tag anime.image, class: "item-img"  %>
-                <%else%>
-                  <%= image_tag 'soundreview2.png', class: "item-img"  %>
-                <%end%>  
-              </div>
-              <div class="profile-all">
-              <div class="profile2">
-                    <% if anime.user.image.attached? %>
-                      <%=link_to user_path(anime.user.id),class:"user-icon4" do %>
-                        <%= image_tag anime.user.image, class: "user-icon4" %>
-                      <%end%>  
-                    <% else %>
-                      <%=link_to user_path(anime.user.id) ,class:"user-icon4" do %>
-                        <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
-                      <%end%>
-                    <% end %>
-                  </div>
-              <div class="item-create">
-                <div class="item-user-name">
-                  <%= link_to anime.user.nickname, user_path(anime.user.id) %>
-                </div> 
-                <div class="created_at" >
-                    <%=anime.created_at.strftime('%Y/%m/%d')%>
-                </div>
-              
-              </div>
-              
-              
-              
-              <% end %>
-            </li>
-            <%end%>
+            <%= item_lists(@anime) %>
           </ul>
           <%= paginate @anime %>
           
@@ -145,49 +59,7 @@
           </div>
           <ul class='item-lists'>
       
-            <%@music.each do |music|%>
-            <li class='list'>
-              <%= link_to item_path(music.id),class:"link" do %>
-              <div class='item-info'>
-                
-                <%= music.name%>
-                
-              </div>
-              <div class='item-img-content'>
-                
-                <%if music.image.attached? %>
-                  <%= image_tag music.image, class: "item-img"  %>
-                <%else%>
-                  <%= image_tag 'soundreview2.png', class: "item-img"  %>
-                <%end%>  
-              </div>
-              <div class="profile-all">
-              <div class="profile2">
-                    <% if music.user.image.attached? %>
-                      <%=link_to user_path(music.user.id),class:"user-icon4" do %>
-                        <%= image_tag music.user.image, class: "user-icon4" %>
-                      <%end%>  
-                    <% else %>
-                      <%=link_to user_path(music.user.id) ,class:"user-icon4" do %>
-                        <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
-                      <%end%>
-                    <% end %>
-                  </div>
-              <div class="item-create">
-                <div class="item-user-name">
-                  <%= link_to music.user.nickname, user_path(music.user.id) %>
-                </div> 
-                <div class="created_at" >
-                    <%=music.created_at.strftime('%Y/%m/%d')%>
-                </div>
-              
-              </div>
-              
-              
-              
-              <% end %>
-            </li>
-            <%end%>
+            <%= item_lists(@music) %>
           </ul>
           <%= paginate @music %>
           
@@ -209,50 +81,7 @@
           book reviews
           </div>
           <ul class='item-lists'>
-      
-            <%@book.each do |book|%>
-            <li class='list'>
-              <%= link_to item_path(book.id),class:"link" do %>
-              <div class='item-info'>
-                
-                <%= book.name%>
-               
-              </div>
-              <div class='item-img-content'>
-                
-                <%if book.image.attached? %>
-                  <%= image_tag book.image, class: "item-img"  %>
-                <%else%>
-                  <%= image_tag 'soundreview2.png', class: "item-img"  %>
-                <%end%>  
-              </div>
-              <div class="profile-all">
-              <div class="profile2">
-                    <% if book.user.image.attached? %>
-                      <%=link_to user_path(book.user.id),class:"user-icon4" do %>
-                        <%= image_tag book.user.image, class: "user-icon4" %>
-                      <%end%>  
-                    <% else %>
-                      <%=link_to user_path(book.user.id) ,class:"user-icon4" do %>
-                        <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
-                      <%end%>
-                    <% end %>
-                  </div>
-              <div class="item-create">
-                <div class="item-user-name">
-                  <%= link_to book.user.nickname, user_path(book.user.id) %>
-                </div> 
-                <div class="created_at" >
-                    <%=book.created_at.strftime('%Y/%m/%d')%>
-                </div>
-              
-              </div>
-              
-              
-              
-              <% end %>
-            </li>
-            <%end%>
+            <%= item_lists(@book) %>
           </ul>
           <%= paginate @book %>
           
@@ -274,50 +103,7 @@
           other reviews
           </div>
           <ul class='item-lists'>
-      
-            <%@other.each do |other|%>
-            <li class='list'>
-              <%= link_to item_path(other.id),class:"link" do %>
-              <div class='item-info'>
-                
-                <%= other.name%>
-                
-              </div>
-              <div class='item-img-content'>
-                
-                <%if other.image.attached? %>
-                  <%= image_tag other.image, class: "item-img"  %>
-                <%else%>
-                  <%= image_tag 'soundreview2.png', class: "item-img"  %>
-                <%end%>  
-              </div>
-              <div class="profile-all">
-              <div class="profile2">
-                    <% if other.user.image.attached? %>
-                      <%=link_to user_path(other.user.id),class:"user-icon4" do %>
-                        <%= image_tag other.user.image, class: "user-icon4" %>
-                      <%end%>  
-                    <% else %>
-                      <%=link_to user_path(other.user.id) ,class:"user-icon4" do %>
-                        <%= image_tag "willy.png", alt: "user-icon", class: "user-icon4" %>
-                      <%end%>
-                    <% end %>
-                  </div>
-              <div class="item-create">
-                <div class="item-user-name">
-                  <%= link_to other.user.nickname, user_path(other.user.id) %>
-                </div> 
-                <div class="created_at" >
-                    <%=other.created_at.strftime('%Y/%m/%d')%>
-                </div>
-              
-              </div>
-              
-              
-              
-              <% end %>
-            </li>
-            <%end%>
+            <%= item_lists(@other) %>
           </ul>
           <%= paginate @other %>
           
